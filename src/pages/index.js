@@ -5,6 +5,13 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+
+
+
+
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -14,7 +21,9 @@ const IndexPage = () => (
             <h1>About</h1>
             <p>
               Satyajeet is an engineer, focused on Software Development. 
+              <FontAwesomeIcon icon={faCoffee} />
             </p>
+            
           </div>
           <div style={{flex:'1'}}>
             <h1>Skills</h1>
@@ -44,17 +53,25 @@ const IndexPage = () => (
           <div>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}></div>
-              <div style={{flex:'1'}}>May 2020</div>
               <div style={{flex:'1'}}>
-                <p><b>New York University</b><br/>Master of Science in Computer Science</p>
+                <div style={{display:'flex',backgroundColor:'black',color:'white',borderRadius:'100%',width:'5vw',height:'5vw',textAlign:'center'}}>
+                  <p style={{margin: 'auto',textAlign:'center',}}>May 2020</p>
+                </div>
+              </div>
+              <div style={{flex:'1'}}>
+                  <p><b>New York University</b><br/>Master of Science in Computer Science</p>
               </div>
             </div>
+            <br/>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}></div>
-              <div style={{flex:'1'}}>May 2015</div>
+              <div style={{flex:'1'}}>
+                <div style={{display:'flex',backgroundColor:'black',color:'white',borderRadius:'100%',width:'5vw',height:'5vw',textAlign:'center'}}>
+                  <p style={{margin: 'auto',textAlign:'center',}}>May 2015</p>
+                </div>
+              </div>
               <div style={{flex:'1'}}>
                 <p><b>KIIT University</b><br/>Bachelor of Technology in Electronics & Telecommunication</p>
-                
               </div>
             </div>
           </div>
@@ -64,21 +81,35 @@ const IndexPage = () => (
           <div>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}></div>
-              <div style={{flex:'1'}}>Present</div>
+              <div style={{flex:'1'}}>
+                <div style={{display:'flex',backgroundColor:'black',color:'white',borderRadius:'100%',width:'5vw',height:'5vw',textAlign:'center'}}>
+                  <p style={{margin: 'auto',textAlign:'center',fontSize:'14px'}}>Jun 2019-Present</p>
+                </div>
+              </div>
               <div style={{flex:'1'}}>
                 <p><b>Altice USA</b><br/>Software Intern</p>
               </div>
             </div>
+            <br/>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}></div>
-              <div style={{flex:'1'}}>Aug 2017 to Aug 2018</div>
+              <div style={{flex:'1'}}>
+                <div style={{display:'flex',backgroundColor:'black',color:'white',borderRadius:'100%',width:'5vw',height:'5vw',textAlign:'center'}}>
+                  <p style={{margin: 'auto',textAlign:'center',fontSize:'14px'}}>Aug 2017-Aug 2018</p>
+                </div>
+              </div>
               <div style={{flex:'1'}}>
                 <p><b>Deloitte</b><br/>Software Engineer</p>
               </div>
             </div>
+            <br/>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}></div>
-              <div style={{flex:'1'}}>Jul 2015 to Aug 2017</div>
+              <div style={{flex:'1'}}>
+              <div style={{display:'flex',backgroundColor:'black',color:'white',borderRadius:'100%',width:'5vw',height:'5vw',textAlign:'center'}}>
+                  <p style={{margin: 'auto',textAlign:'center',fontSize:'14px'}}>Jul 2015-Aug 2017</p>
+                </div>
+              </div>
               <div style={{flex:'1'}}>
                 <p><b>Accenture</b><br/>Software Engineer</p>
               </div>
