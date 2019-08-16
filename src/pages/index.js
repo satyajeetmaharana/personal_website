@@ -5,13 +5,6 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
-
-
-
-
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -21,7 +14,6 @@ const IndexPage = () => (
             <h1>About</h1>
             <p>
               Satyajeet is an engineer, focused on Software Development. 
-              <FontAwesomeIcon icon={faCoffee} />
             </p>
             
           </div>
