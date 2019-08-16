@@ -7,7 +7,8 @@ const Header = ({ siteTitle }) => (
     style={{
       background: `black`,
       marginBottom: `1.45rem`,
-      position:'sticky'
+      position:'sticky',
+      top:0,
     }}
   >
     <div
@@ -21,7 +22,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `#19d197`,
             textDecoration: `none`,
           }}
         >
