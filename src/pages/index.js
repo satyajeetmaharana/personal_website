@@ -15,29 +15,49 @@ const IndexPage = () => (
             <p>
               Satyajeet is an engineer, focused on Software Development. 
             </p>
-            
           </div>
           <div style={{flex:'1'}}>
             <h1>Skills</h1>
             <p>
-              <ul style={{listStyle:'none'}}>
-                <li>
-                  <div>
-                    HTML
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    Salesforce
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    Java
-                  </div>
-                </li>
-              </ul>
+              
             </p>
+            <div style={{display:'flex'}}>
+              <div style={{flex:'1'}}>
+                <div><b>Programming</b></div>
+                <div>
+                  Java<br/>
+                  Apex<br/>
+                  Python<br/>
+                  JavaScript<br/>
+                  C++<br/>
+                  Shell scripting<br/>
+                  ANT<br/>
+                  HTML/CSS<br/>
+                </div>
+              </div>
+              <div style={{flex:'1'}}>
+                <div><b>Databases</b></div>
+                <div>
+                  SQL<br/>
+                  Hive<br/>
+                  MongoDB<br/>
+                </div>
+              </div>
+              <div style={{flex:'1'}}>
+                <div><b>Frameworks & Technology</b></div>
+                <div>
+                  Pandas<br/>
+                  NumPy<br/>
+                  Matplotlib<br/>
+                  scikit-learn<br/>
+                  Seaborn<br/>
+                  Apache Spark<br/>
+                  Hadoop<br/>
+                  Node.js<br/>
+                  React.js<br/>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div>
