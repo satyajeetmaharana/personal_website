@@ -8,18 +8,20 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div>
+    <div style={{backgroundColor:'black',color:'white'}}>
         <div style={{display:'flex'}}>
-          <div style={{flex:'1',backgroundColor:'black',color:'white',padding:'5rem'}}>
+          <div style={{flex:'1',padding:'5rem'}}>
             <h1 style={{color:'#35db8b',textAlign:'center'}}>About</h1>
+            <br/>
             <p style={{textAlign:'center'}}>
               Satyajeet is an engineer, focused on Software Development. 
             </p>
           </div>
         </div>
         <div style={{display:'flex'}}>
-          <div style={{flex:'1',backgroundColor:'#35db8b',padding:'5rem'}}>
-            <h1 style={{textAlign:'center'}}>Skills</h1>
+          <div style={{flex:'1',padding:'5rem'}}>
+            <h1 style={{color:'#35db8b',textAlign:'center'}}>Skills</h1>
+            <br/>
             <div style={{display:'flex',textAlign:'center'}}>
               <div style={{flex:'1'}}>
                 <div><b>Programming</b></div>
@@ -59,8 +61,9 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{backgroundColor:'black',padding:'5rem'}}>
+        <div style={{padding:'5rem'}}>
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Education</h1>
+          <br/>
           <div style={{color:'white'}}>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
@@ -81,8 +84,9 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{backgroundColor:'#35db8b',padding:'5rem'}}>
-          <h1 style={{textAlign:'center'}}>Experience</h1>
+        <div style={{padding:'5rem'}}>
+          <h1 style={{color:'#35db8b',textAlign:'center'}}>Experience</h1>
+          <br/>
           <div>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
@@ -112,8 +116,9 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{backgroundColor:'black',padding:'5rem',color:'white'}}>
+        <div style={{padding:'5rem'}}>
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Projects</h1>
+          <br/>
           <div>
             <div>
               <b>
