@@ -10,17 +10,17 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div>
         <div style={{display:'flex'}}>
-          <div style={{flex:'1'}}>
-            <h1>About</h1>
-            <p>
+          <div style={{flex:'1',backgroundColor:'black',color:'white',padding:'5rem'}}>
+            <h1 style={{color:'#35db8b',textAlign:'center'}}>About</h1>
+            <p style={{textAlign:'center'}}>
               Satyajeet is an engineer, focused on Software Development. 
             </p>
           </div>
         </div>
         <div style={{display:'flex'}}>
-          <div style={{flex:'1'}}>
-            <h1>Skills</h1>
-            <div style={{display:'flex'}}>
+          <div style={{flex:'1',backgroundColor:'#35db8b',padding:'5rem'}}>
+            <h1 style={{textAlign:'center'}}>Skills</h1>
+            <div style={{display:'flex',textAlign:'center'}}>
               <div style={{flex:'1'}}>
                 <div><b>Programming</b></div>
                 <div>
@@ -59,9 +59,9 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div>
-          <h1>Education</h1>
-          <div>
+        <div style={{backgroundColor:'black',padding:'5rem'}}>
+          <h1 style={{color:'#35db8b',textAlign:'center'}}>Education</h1>
+          <div style={{color:'white'}}>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
                   <p style={{margin: 'auto',textAlign:'center',}}>May 2020</p>
@@ -81,12 +81,12 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div>
-          <h1>Experience</h1>
+        <div style={{backgroundColor:'#35db8b',padding:'5rem'}}>
+          <h1 style={{textAlign:'center'}}>Experience</h1>
           <div>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center',fontSize:'14px'}}>Jun 2019-Present</p>
+                  <p style={{margin: 'auto',textAlign:'center'}}>Jun 2019-Present</p>
               </div>
               <div style={{flex:'1'}}>
                 <p><b>Altice USA</b><br/>Software Intern</p>
@@ -95,7 +95,7 @@ const IndexPage = () => (
             <br/>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center',fontSize:'14px'}}>Aug 2017-Aug 2018</p>
+                  <p style={{margin: 'auto',textAlign:'center'}}>Aug 2017-Aug 2018</p>
               </div>
               <div style={{flex:'1'}}>
                 <p><b>Deloitte</b><br/>Software Engineer</p>
@@ -104,7 +104,7 @@ const IndexPage = () => (
             <br/>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center',fontSize:'14px'}}>Jul 2015-Aug 2017</p>
+                  <p style={{margin: 'auto',textAlign:'center'}}>Jul 2015-Aug 2017</p>
               </div>
               <div style={{flex:'1'}}>
                 <p><b>Accenture</b><br/>Software Engineer</p>
@@ -112,8 +112,8 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div>
-          <h1>Projects</h1>
+        <div style={{backgroundColor:'black',padding:'5rem',color:'white'}}>
+          <h1 style={{color:'#35db8b',textAlign:'center'}}>Projects</h1>
           <div>
             <div>
               <b>
