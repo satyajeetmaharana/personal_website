@@ -1,0 +1,11 @@
+.is-current{
+    background-color: #35db8b;
+    color:black !important;
+}
+
+.link-to-section{
+    text-decoration: none;
+    color:white;
+    padding:10px;
+    text-align: center;
+}

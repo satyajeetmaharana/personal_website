@@ -4,12 +4,24 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import '../style/index.css'
+
+import Scrollspy from 'react-scrollspy'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div style={{backgroundColor:'black',color:'white'}}>
-        <div style={{display:'flex'}}>
+        <div style={{position:'sticky',zIndex:'100',top:'0',backgroundColor:'black',color:'white',padding:'1rem',textAlign:'center'}}>
+          <Scrollspy items={ ['About', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a" offset="10">
+              <a href="#About" className="link-to-section">About</a>
+              <a href="#Skills" className="link-to-section">Skills</a>
+              <a href="#Education" className="link-to-section">Education</a>
+              <a href="#Experience" className="link-to-section">Experience</a>
+              <a href="#Projects" className="link-to-section">Projects</a>
+        </Scrollspy>
+      </div>
+        <div style={{display:'flex'}} id="About">
           <div style={{flex:'1',padding:'5rem'}}>
             <h1 style={{color:'#35db8b',textAlign:'center'}}>About</h1>
             <br/>
@@ -18,7 +30,7 @@ const IndexPage = () => (
             </p>
           </div>
         </div>
-        <div style={{display:'flex'}}>
+        <div style={{display:'flex'}} id="Skills">
           <div style={{flex:'1',padding:'5rem'}}>
             <h1 style={{color:'#35db8b',textAlign:'center'}}>Skills</h1>
             <br/>
@@ -61,7 +73,7 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{padding:'5rem'}}>
+        <div style={{padding:'5rem'}} id="Education">
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Education</h1>
           <br/>
           <div style={{color:'white'}}>
@@ -84,7 +96,7 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{padding:'5rem'}}>
+        <div style={{padding:'5rem'}} id="Experience">
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Experience</h1>
           <br/>
           <div>
@@ -116,7 +128,7 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{padding:'5rem'}}>
+        <div style={{padding:'5rem'}} id="Projects">
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Projects</h1>
           <br/>
           <div>
