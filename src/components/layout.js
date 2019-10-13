@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
         <footer style={{color:'white',backgroundColor:'black',padding:'1rem',textAlign:'center'}}>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://reactjs.org/">React</a>
         </footer>
       </div>
     </>
