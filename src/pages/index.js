@@ -13,15 +13,15 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div style={{backgroundColor:'black',color:'white'}}>
         <div style={{position:'sticky',zIndex:'100',top:'0',backgroundColor:'black',color:'white',padding:'1rem',textAlign:'center'}}>
-          <Scrollspy items={ ['About', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a" offset="10">
-              <a href="#About" className="link-to-section">About</a>
+          <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a" offset="10">
+              <a href="#AboutSec" className="link-to-section">About</a>
               <a href="#Skills" className="link-to-section">Skills</a>
               <a href="#Education" className="link-to-section">Education</a>
               <a href="#Experience" className="link-to-section">Experience</a>
               <a href="#Projects" className="link-to-section">Projects</a>
         </Scrollspy>
       </div>
-        <div style={{display:'flex'}} id="About">
+        <div style={{display:'flex'}} id="AboutSec">
           <div style={{flex:'1',padding:'5rem'}}>
             <h1 style={{color:'#35db8b',textAlign:'center'}}>About</h1>
             <br/>
@@ -102,7 +102,7 @@ const IndexPage = () => (
           <div>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>Jun 2019-Present</p>
+                  <p style={{margin: 'auto',textAlign:'center'}}>Jun 2019-Aug 2019</p>
               </div>
               <div style={{flex:'1'}}>
                 <p><b>Altice USA</b><br/>Software Intern</p>
