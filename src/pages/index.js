@@ -11,7 +11,7 @@ import Scrollspy from 'react-scrollspy'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div style={{backgroundColor:'black',color:'white'}}>
+    <div style={{backgroundColor:'white',color:'black'}}>
         <div style={{position:'sticky',zIndex:'100',top:'0',backgroundColor:'black',color:'white',padding:'1rem',textAlign:'center'}}>
           <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a" offset="10">
               <a href="#AboutSec" className="link-to-section">About</a>
@@ -76,7 +76,7 @@ const IndexPage = () => (
         <div style={{padding:'5rem'}} id="Education">
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Education</h1>
           <br/>
-          <div style={{color:'white'}}>
+          <div>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
                   <p style={{margin: 'auto',textAlign:'center',}}>May 2020</p>
