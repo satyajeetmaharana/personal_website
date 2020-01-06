@@ -38,14 +38,7 @@ const IndexPage = () => (
               <div style={{flex:'1'}}>
                 <div><b>Programming</b></div>
                 <div>
-                  Java<br/>
-                  Apex<br/>
-                  Python<br/>
-                  JavaScript<br/>
-                  C++<br/>
-                  Shell scripting<br/>
-                  ANT<br/>
-                  HTML/CSS<br/>
+                  Java<br/>Apex<br/>Python<br/>JavaScript<br/>C++<br/>Shell scripting<br/>HTML<br/>CSS<br/>
                 </div>
               </div>
               <div style={{flex:'1'}}>
@@ -59,15 +52,13 @@ const IndexPage = () => (
               <div style={{flex:'1'}}>
                 <div><b>Frameworks & Technology</b></div>
                 <div>
-                  Pandas<br/>
-                  NumPy<br/>
-                  Matplotlib<br/>
-                  scikit-learn<br/>
-                  Seaborn<br/>
-                  Apache Spark<br/>
-                  Hadoop<br/>
-                  Node.js<br/>
-                  React.js<br/>
+                  scikit-learn<br/>PyTorch<br/>Apache Spark<br/>Hadoop<br/>React.js<br/>
+                </div>
+              </div>
+              <div style={{flex:'1'}}>
+                <div><b>Tools</b></div>
+                <div>
+                  Jenkins<br/>Git<br/>Bamboo<br/>
                 </div>
               </div>
             </div>
@@ -83,6 +74,8 @@ const IndexPage = () => (
               </div>
               <div style={{flex:'1'}}>
                   <p><b>New York University</b><br/>Master of Science in Computer Science</p>
+                  <p><b>Relevant Coursework:</b>&nbsp;Database Systems, Fundamental Algorithms, Operating Systems, Data Science for Business Analytics, Big Data Application Development</p>
+                  <p><b>GPA:</b>&nbsp;3.815/4</p>
               </div>
             </div>
             <br/>
@@ -92,6 +85,7 @@ const IndexPage = () => (
               </div>
               <div style={{flex:'1'}}>
                 <p><b>KIIT University</b><br/>Bachelor of Technology in Electronics & Telecommunication</p>
+                <p><b>GPA:</b>&nbsp;7.86/10</p>
               </div>
             </div>
           </div>
@@ -106,6 +100,11 @@ const IndexPage = () => (
               </div>
               <div style={{flex:'1'}}>
                 <p><b>Altice USA</b><br/>Software Intern</p>
+                <p style={{textAlign: 'justify'}}>
+                  <ul>
+                    <li>Revamped the sales and services platform by developing scalable and responsive business applications using Java which led to streamlined business process and improved user experience</li>
+                  </ul>
+                </p>
               </div>
             </div>
             <br/>
@@ -115,6 +114,14 @@ const IndexPage = () => (
               </div>
               <div style={{flex:'1'}}>
                 <p><b>Deloitte</b><br/>Software Engineer</p>
+                <p style={{textAlign: 'justify'}}>
+                  <ul>
+                    <li>Developed a "Next Best Opportunity and Lead recommender system" based on customer preferences, prospect engagement, and competitor involvement, which helped Sales Team make data-driven decisions</li>
+                    <li>Optimized code and re-engineered existing system architecture; reduced costs for future enhancements and maintenance by 30%</li>
+                    <li>Implemented CI/CD of code using Bitbucket & Bamboo; reduced development time by 20% and late stage-QA defects by 15%</li>
+                    <li>Ideated and built a Gamification app using JavaScript & Lightning Components for the Salesforce iOS app; notably increased internal user engagement</li>
+                  </ul>
+                </p>
               </div>
             </div>
             <br/>
@@ -124,6 +131,13 @@ const IndexPage = () => (
               </div>
               <div style={{flex:'1'}}>
                 <p><b>Accenture</b><br/>Software Engineer</p>
+                <p style={{textAlign: 'justify'}}>
+                  <ul>
+                    <li>Led the customer services team to develop case routing algorithms for classification of new service requests; increased service requests closer rate by ~20%</li>
+                    <li>Analyzed and developed a prototype for a chatbot which simplified querying and executing routine tasks on customer service requests</li>
+                    <li>Implemented end-to-end deployments by coordinating effectively with various cross-functional teams from multiple locations to bring critical client projects to successful closure</li>
+                  </ul>
+                </p>
               </div>
             </div>
           </div>
@@ -132,6 +146,20 @@ const IndexPage = () => (
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Projects</h1>
           <br/>
           <div>
+          <div>
+              <b>
+                Hand Movement Detection & Scene Prediction in EgoHands Video Dataset
+              </b>
+              <p style={{textAlign: 'justify'}}>
+                The goal of this project is to detect hands in the videos and predict the scene based on the hand actions using Deep Learning techniques.
+                <br/>
+                Architected and trained two recurrent convolutional neural networks:
+                <br/>
+                A network to detect hands using the MaskRCNN architecture: Avg. Precision: 0.7472 Avg. Recall: 0.6184 (IOU metrics)
+                <br/>
+                A ResNet50 network to classify each video into one of the 4 scenes (playing  Puzzle, Jenga, Cards, Chess): Accuracy: 85.40%<br/>
+              </p>
+            </div>
             <div>
               <b>
                 Community detection in networks with fuzzy boundaries
