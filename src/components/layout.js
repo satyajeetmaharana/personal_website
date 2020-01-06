@@ -5,6 +5,9 @@ import Header from "./header"
 import "./layout.css"
 
 import Image from "../components/image"
+import { FiArrowDownCircle } from 'react-icons/fi';
+import { IconContext } from "react-icons";
+import { Link } from "gatsby"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -16,7 +19,10 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
   return (
     <>
       <div style={{position:'sticky',zIndex:'-999',top:'0'}}>
@@ -28,7 +34,15 @@ const Layout = ({ children }) => {
       <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
         <div style={{fontSize:'4rem',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Satyajeet Maharana</div>
         <div style={{fontSize:'1rem',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
+        
       </div>
+      <div className="bounce" style={{position:'absolute',top:'90%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
+          <IconContext.Provider value={{ size: "3rem", color: "white"}}>
+            <div>
+              <Link to="/#head-links"><FiArrowDownCircle /></Link>
+            </div>
+          </IconContext.Provider>
+        </div>
       
       <div
         style={{

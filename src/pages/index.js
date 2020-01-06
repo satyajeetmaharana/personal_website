@@ -11,7 +11,7 @@ import Scrollspy from 'react-scrollspy'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div style={{backgroundColor:'white',color:'black'}}>
+    <div style={{backgroundColor:'white',color:'black'}} id="head-links">
         <div style={{position:'sticky',zIndex:'100',top:'0',backgroundColor:'black',color:'white',padding:'1rem',textAlign:'center'}}>
           <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a" offset="10">
               <a href="#AboutSec" className="link-to-section">About</a>
