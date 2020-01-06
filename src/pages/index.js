@@ -13,7 +13,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div style={{backgroundColor:'white',color:'black'}} id="head-links">
         <div style={{position:'sticky',zIndex:'100',top:'0',backgroundColor:'black',color:'white',padding:'1rem',textAlign:'center'}}>
-          <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a" offset="10">
+          <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a" offset="6">
               <a href="#AboutSec" className="link-to-section">About</a>
               <a href="#Skills" className="link-to-section">Skills</a>
               <a href="#Education" className="link-to-section">Education</a>
@@ -22,16 +22,16 @@ const IndexPage = () => (
         </Scrollspy>
       </div>
         <div style={{display:'flex'}} id="AboutSec">
-          <div style={{flex:'1',padding:'5rem'}}>
-            <h1 style={{color:'#35db8b',textAlign:'center'}}>About</h1>
+          <div style={{flex:'1'}}>
+            <h1 style={{color:'#35db8b',textAlign:'center'}} >About</h1>
             <br/>
-            <p style={{textAlign:'center'}}>
+            <p style={{textAlign:'center'}} >
               Satyajeet is an engineer, focused on Software Development. 
             </p>
           </div>
         </div>
         <div style={{display:'flex'}} id="Skills">
-          <div style={{flex:'1',padding:'5rem'}}>
+          <div style={{flex:'1'}}>
             <h1 style={{color:'#35db8b',textAlign:'center'}}>Skills</h1>
             <br/>
             <div style={{display:'flex',textAlign:'center'}}>
@@ -64,7 +64,7 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{padding:'5rem'}} id="Education">
+        <div  id="Education">
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Education</h1>
           <br/>
           <div>
@@ -90,7 +90,7 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{padding:'5rem'}} id="Experience">
+        <div  id="Experience">
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Experience</h1>
           <br/>
           <div>
@@ -142,10 +142,8 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{padding:'5rem'}} id="Projects">
+        <div id="Projects">
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Projects</h1>
-          <br/>
-          <div>
           <div>
               <b>
                 Hand Movement Detection & Scene Prediction in EgoHands Video Dataset
@@ -178,7 +176,6 @@ const IndexPage = () => (
               <b>Programming Languages Trend and Sentiment Analysis</b>
               <p style={{textAlign: 'justify'}}>Scraped StackOverflow and StackExchange data from 2010 through 2017 and performed data analysis on raw posts and comments data to gain insights about the upcoming programming languages and the overall satisfaction of the developer communities by the Sentiment analysis of the comments using NLTK, Pandas, NumPy, Matplotlib, Seaborn. We mitigated the challenge of having more than 100 GB of raw textual data by pre-processing our dataset on HDFS.</p>
             </div>
-          </div>  
         </div>
     </div>
   </Layout>

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Satyajeet Maharana`,
-    description: `Thank you for your time to actually learn more about Satyajeet.`,
+    description: `Learn more about Satyajeet Maharana, Computer Scientist and Software Engineer.`,
     author: `@satyajeetmaharana`,
   },
   plugins: [

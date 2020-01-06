@@ -60,7 +60,7 @@ const Layout = ({ children }) => {
         <footer style={{color:'white',backgroundColor:'black',padding:'1rem',textAlign:'center'}}>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://reactjs.org/">React</a>
+          <a href="https://reactjs.org/" style={{textDecoration:'none',color:'white'}}>React</a>
         </footer>
       </div>
     </>
