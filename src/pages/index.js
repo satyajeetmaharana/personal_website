@@ -12,68 +12,86 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div style={{backgroundColor:'white',color:'black'}} id="head-links">
-        <div style={{position:'sticky',zIndex:'100',top:'0',backgroundColor:'black',color:'white',padding:'1rem',textAlign:'center'}}>
-          <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a" offset="6">
-              <a href="#AboutSec" className="link-to-section">About</a>
-              <a href="#Skills" className="link-to-section">Skills</a>
-              <a href="#Education" className="link-to-section">Education</a>
-              <a href="#Experience" className="link-to-section">Experience</a>
-              <a href="#Projects" className="link-to-section">Projects</a>
-        </Scrollspy>
-      </div>
-        <div style={{display:'flex'}} id="AboutSec">
+        <div style={{position:'sticky',zIndex:'100',top:'30%',backgroundColor:'black',color:'white',padding:'1rem',textAlign:'center',width:'11%',marginLeft:'1%'}}>
+          <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a">
+              <a href="#AboutSec" className="link-to-section">About<br/></a>
+              <a href="#Skills" className="link-to-section">Skills<br/></a>
+              <a href="#Education" className="link-to-section">Education<br/></a>
+              <a href="#Experience" className="link-to-section">Experience<br/></a>
+              <a href="#Projects" className="link-to-section">Projects<br/></a>
+          </Scrollspy>
+        </div>
+        <div style={{display:'flex',paddingLeft:'15%',paddingRight:'15%',marginTop:'-100px'}} >
           <div style={{flex:'1'}}>
-            <h1 style={{color:'#35db8b',textAlign:'center'}} >About</h1>
+            <h1 style={{color:'#35db8b',textAlign:'center'}} id="AboutSec">About</h1>
             <br/>
             <p style={{textAlign:'center'}} >
               Satyajeet is an engineer, focused on Software Development. 
             </p>
           </div>
         </div>
-        <div style={{display:'flex'}} id="Skills">
+        <div style={{height:'4rem'}}></div>
+        <div style={{display:'flex',paddingLeft:'15%',paddingRight:'15%'}} >
           <div style={{flex:'1'}}>
-            <h1 style={{color:'#35db8b',textAlign:'center'}}>Skills</h1>
+            <h1 style={{color:'#35db8b',textAlign:'center'}} id="Skills">Skills</h1>
             <br/>
-            <div style={{display:'flex',textAlign:'center'}}>
+            <div style={{display:'flex',textAlign:'center',flexDirection:'column'}}>
               <div style={{flex:'1'}}>
-                <div><b>Programming</b></div>
-                <div>
-                  Java<br/>Apex<br/>Python<br/>JavaScript<br/>C++<br/>Shell scripting<br/>HTML<br/>CSS<br/>
+                <div style={{display:'flex'}}>
+                  <div style={{flex:'1'}}>
+                  <b>Programming</b>
+                  </div>
+                  <div style={{flex:'1'}}>
+                    Java, Apex, Python, JavaScript, C++, Shell scripting, HTML, CSS
+                  </div>
                 </div>
               </div>
               <div style={{flex:'1'}}>
-                <div><b>Databases</b></div>
-                <div>
-                  SQL<br/>
-                  Hive<br/>
-                  MongoDB<br/>
+                <div style={{display:'flex'}}>
+                  <div style={{flex:'1'}}>
+                  <b>Databases</b>
+                  </div>
+                  <div style={{flex:'1'}}>
+                  SQL, Hive, MongoDB
+                  </div>
                 </div>
               </div>
               <div style={{flex:'1'}}>
-                <div><b>Frameworks & Technology</b></div>
-                <div>
-                  scikit-learn<br/>PyTorch<br/>Apache Spark<br/>Hadoop<br/>React.js<br/>
+                <div style={{display:'flex'}}>
+                  <div style={{flex:'1'}}>
+                  <b>Frameworks & Technology</b>
+                  </div>
+                  <div style={{flex:'1'}}>
+                  scikit-learn, PyTorch, Apache Spark, Hadoop, React.js
+                  </div>
                 </div>
               </div>
               <div style={{flex:'1'}}>
-                <div><b>Tools</b></div>
-                <div>
-                  Jenkins<br/>Git<br/>Bamboo<br/>
+                <div style={{display:'flex'}}>
+                  <div style={{flex:'1'}}>
+                  <b>Tools</b>
+                  </div>
+                  <div style={{flex:'1'}}>
+                    Jenkins, Git, Bamboo
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div  id="Education">
-          <h1 style={{color:'#35db8b',textAlign:'center'}}>Education</h1>
-          <br/>
+        <div style={{height:'4rem'}}></div>
+        <div style={{paddingLeft:'15%',paddingRight:'15%'}} id="Education">
+          <h1 style={{color:'#35db8b',textAlign:'center'}} >Education</h1>
           <div>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center',}}>May 2020</p>
+                  <p style={{margin: 'auto',textAlign:'center'}}>
+                    <div><b>New York University</b></div>
+                    <div style={{color:'gray'}}>May 2020</div>
+                  </p>
               </div>
               <div style={{flex:'1'}}>
-                  <p><b>New York University</b><br/>Master of Science in Computer Science</p>
+                  <p><b>Master of Science in Computer Science</b></p>
                   <p><b>Relevant Coursework:</b>&nbsp;Database Systems, Fundamental Algorithms, Operating Systems, Data Science for Business Analytics, Big Data Application Development</p>
                   <p><b>GPA:</b>&nbsp;3.815/4</p>
               </div>
@@ -81,25 +99,31 @@ const IndexPage = () => (
             <br/>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center',}}>May 2015</p>
+                  <p style={{margin: 'auto',textAlign:'center'}}>
+                    <div><b>KIIT University</b></div>
+                    <div style={{color:'gray'}}>May 2015</div>
+                  </p>
               </div>
               <div style={{flex:'1'}}>
-                <p><b>KIIT University</b><br/>Bachelor of Technology in Electronics & Telecommunication</p>
+                <p><b>Bachelor of Technology in Electronics & Telecommunication</b></p>
                 <p><b>GPA:</b>&nbsp;7.86/10</p>
               </div>
             </div>
           </div>
         </div>
-        <div  id="Experience">
-          <h1 style={{color:'#35db8b',textAlign:'center'}}>Experience</h1>
-          <br/>
-          <div>
-            <div style={{display:'flex'}}>
+        <div style={{height:'4rem'}}></div>
+        <div style={{paddingLeft:'15%',paddingRight:'15%'}} id="Experience">
+          <h1 style={{color:'#35db8b',textAlign:'center'}} >Experience</h1>
+          <div >
+            <div style={{display:'flex'}} >
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>Jun 2019-Aug 2019</p>
+                <p style={{margin: 'auto',textAlign:'center'}}>
+                    <div><b>Altice USA</b></div>
+                    <div style={{color:'gray'}}>Jun 2019-Aug 2019</div>
+                </p>
               </div>
               <div style={{flex:'1'}}>
-                <p><b>Altice USA</b><br/>Software Intern</p>
+                <p><b>Software Intern</b></p>
                 <p style={{textAlign: 'justify'}}>
                   <ul>
                     <li>Revamped the sales and services platform by developing scalable and responsive business applications using Java which led to streamlined business process and improved user experience</li>
@@ -110,10 +134,13 @@ const IndexPage = () => (
             <br/>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>Aug 2017-Aug 2018</p>
+                  <p style={{margin: 'auto',textAlign:'center'}}>
+                    <div><b>Deloitte</b></div>
+                    <div style={{color:'gray'}}>Aug 2017-Aug 2018</div>
+                   </p>
               </div>
               <div style={{flex:'1'}}>
-                <p><b>Deloitte</b><br/>Software Engineer</p>
+                <p><b>Software Engineer</b></p>
                 <p style={{textAlign: 'justify'}}>
                   <ul>
                     <li>Developed a "Next Best Opportunity and Lead recommender system" based on customer preferences, prospect engagement, and competitor involvement, which helped Sales Team make data-driven decisions</li>
@@ -127,10 +154,13 @@ const IndexPage = () => (
             <br/>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>Jul 2015-Aug 2017</p>
+                  <p style={{margin: 'auto',textAlign:'center'}}>
+                    <div><b>Accenture</b></div>
+                    <div style={{color:'gray'}}>Jul 2015-Aug 2017</div>
+                   </p>
               </div>
               <div style={{flex:'1'}}>
-                <p><b>Accenture</b><br/>Software Engineer</p>
+                <p><b>Software Engineer</b></p>
                 <p style={{textAlign: 'justify'}}>
                   <ul>
                     <li>Led the customer services team to develop case routing algorithms for classification of new service requests; increased service requests closer rate by ~20%</li>
@@ -142,9 +172,10 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div id="Projects">
+        <div style={{height:'4rem'}}></div>
+        <div style={{paddingLeft:'15%',paddingRight:'15%'}} id="Projects">
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Projects</h1>
-          <div>
+          <div >
               <b>
                 Hand Movement Detection & Scene Prediction in EgoHands Video Dataset
               </b>

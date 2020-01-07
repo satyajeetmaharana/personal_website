@@ -6,6 +6,7 @@ import "./layout.css"
 
 import Image from "../components/image"
 import { FiArrowDownCircle } from 'react-icons/fi';
+import { FaExternalLinkAlt, FaReact } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import { Link } from "gatsby"
 
@@ -32,8 +33,8 @@ const Layout = ({ children }) => {
       <div style={{position:'fixed',width:'100%',height:'100%',top:'0',bottom:'0',left:'0',right:'0',backgroundColor:'rgba(0,0,0,0.5)'}}>
       </div>
       <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
-        <div style={{fontSize:'4rem',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Satyajeet Maharana</div>
-        <div style={{fontSize:'1rem',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
+        <div style={{fontSize:'4rem',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>I'm Satyajeet.</div>
+        <div style={{fontSize:'1rem',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>a software engineer.</div>
         
       </div>
       <div className="bounce" style={{position:'absolute',top:'90%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
@@ -58,9 +59,11 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer style={{color:'white',backgroundColor:'black',padding:'1rem',textAlign:'center'}}>
-          © {new Date().getFullYear()}, Built with
+          © Satyajeet Maharana | New York City, {new Date().getFullYear()} <br/> Built with
           {` `}
-          <a href="https://reactjs.org/" style={{textDecoration:'none',color:'white'}}>React</a>
+          <a href="https://reactjs.org/" style={{textDecoration:'underline',color:'white'}} target="_blank">React <FaReact size='15'/></a>
+          &nbsp;&&nbsp;
+          <a href="https://www.gatsbyjs.org/" style={{textDecoration:'underline',color:'white'}} target="_blank">Gatsby <FaExternalLinkAlt size='15'/></a>
         </footer>
       </div>
     </>
