@@ -6,9 +6,11 @@ import "./layout.css"
 
 import Image from "../components/image"
 import { FiArrowDownCircle } from 'react-icons/fi';
-import { FaExternalLinkAlt, FaReact } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaReact, FaLinkedin,FaGithubSquare } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import { Link } from "gatsby"
+
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,16 +28,22 @@ const Layout = ({ children }) => {
   }
   return (
     <>
+      
       <div style={{position:'sticky',zIndex:'-999',top:'0'}}>
           <Image/>
       </div>
-
+      
       <div style={{position:'fixed',width:'100%',height:'100%',top:'0',bottom:'0',left:'0',right:'0',backgroundColor:'rgba(0,0,0,0.5)'}}>
       </div>
       <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
-        <div style={{fontSize:'4rem',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>I'm Satyajeet.</div>
-        <div style={{fontSize:'1rem',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>a software engineer.</div>
-        
+        <div style={{fontSize:'3em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>I'm Satyajeet.</div>
+        <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>a software engineer.</div>
+        <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
+          <div>
+            <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank"><FaLinkedin/></a>&nbsp;&nbsp;
+            <a href="https://github.com/satyajeetmaharana" target="_blank"><FaGithubSquare/></a>
+          </div>
+        </IconContext.Provider>
       </div>
       <div className="bounce" style={{position:'absolute',top:'90%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
           <IconContext.Provider value={{ size: "3rem", color: "white"}}>
@@ -44,7 +52,6 @@ const Layout = ({ children }) => {
             </div>
           </IconContext.Provider>
         </div>
-      
       <div
         style={{
           margin: `0 auto`,

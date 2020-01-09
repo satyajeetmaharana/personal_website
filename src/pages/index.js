@@ -7,11 +7,26 @@ import SEO from "../components/seo"
 import '../style/index.css'
 
 import Scrollspy from 'react-scrollspy'
+import Fade from 'react-reveal/Fade';
+import {FaLinkedin,FaGithubSquare } from 'react-icons/fa';
+import { IconContext } from "react-icons";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div style={{backgroundColor:'white',color:'black'}} id="head-links">
+        
+          <div style={{position:'sticky',zIndex:'100',left:'90%', top : '10%',color:'white',padding:'1rem',textAlign:'center',width:'11%',marginLeft:'1%'}}>
+            <IconContext.Provider value={{size:'2em', className: "contact-icons-bottom"}} >
+              <Fade right big cascade >
+                <div>
+                  <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank"><FaLinkedin/></a>&nbsp;&nbsp;
+                  <a href="https://github.com/satyajeetmaharana" target="_blank"><FaGithubSquare/></a>
+                </div>
+              </Fade>
+            </IconContext.Provider>
+          </div>
+        
         <div style={{position:'sticky',zIndex:'100',top:'30%',backgroundColor:'black',color:'white',padding:'1rem',textAlign:'center',width:'11%',marginLeft:'1%'}}>
           <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a">
               <a href="#AboutSec" className="link-to-section">About<br/></a>
@@ -21,6 +36,7 @@ const IndexPage = () => (
               <a href="#Projects" className="link-to-section">Projects<br/></a>
           </Scrollspy>
         </div>
+        
         <div style={{display:'flex',paddingLeft:'15%',paddingRight:'15%',marginTop:'-100px'}} >
           <div style={{flex:'1'}}>
             <h1 style={{color:'#35db8b',textAlign:'center'}} id="AboutSec">About</h1>
@@ -80,6 +96,7 @@ const IndexPage = () => (
           </div>
         </div>
         <div style={{height:'4rem'}}></div>
+        
         <div style={{paddingLeft:'15%',paddingRight:'15%'}} id="Education">
           <h1 style={{color:'#35db8b',textAlign:'center'}} >Education</h1>
           <div>

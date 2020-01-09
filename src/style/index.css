@@ -1,5 +1,7 @@
 .is-current{
     color:#35db8b !important;
+    font-weight: bolder;
+    transition-delay: 0.02s;
 }
 
 .link-to-section{
@@ -7,4 +9,8 @@
     color:white;
     padding:10px;
     text-align: center;
+}
+
+.link-to-section:hover {
+    color:#60d89e !important;
 }
