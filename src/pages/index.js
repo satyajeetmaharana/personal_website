@@ -14,7 +14,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div style={{backgroundColor:'white',color:'black'}} id="head-links">
         
-          <div style={{position:'sticky',zIndex:'100',left:'90%', top : '10%',color:'white',padding:'1rem',textAlign:'center',width:'15%',marginLeft:'1%'}}>
+          <div style={{position:'sticky',zIndex:'100',left:'90%', top : '10%',color:'white',padding:'1rem',textAlign:'center',width:'14%',marginLeft:'1%'}}>
             <IconContext.Provider value={{size:'2em', className: "contact-icons-bottom"}} >
               <Fade right big cascade >
                 <div>
