@@ -6,7 +6,7 @@ import '../style/index.css'
 
 import Scrollspy from 'react-scrollspy'
 import Fade from 'react-reveal/Fade';
-import {FaLinkedin,FaGithubSquare } from 'react-icons/fa';
+import {FaLinkedin,FaGithubSquare,FaEnvelope } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 
 const IndexPage = () => (
@@ -14,12 +14,13 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div style={{backgroundColor:'white',color:'black'}} id="head-links">
         
-          <div style={{position:'sticky',zIndex:'100',left:'90%', top : '10%',color:'white',padding:'1rem',textAlign:'center',width:'11%',marginLeft:'1%'}}>
+          <div style={{position:'sticky',zIndex:'100',left:'90%', top : '10%',color:'white',padding:'1rem',textAlign:'center',width:'15%',marginLeft:'1%'}}>
             <IconContext.Provider value={{size:'2em', className: "contact-icons-bottom"}} >
               <Fade right big cascade >
                 <div>
                   <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>&nbsp;&nbsp;
-                  <a href="https://github.com/satyajeetmaharana" target="_blank" rel="noopener noreferrer"><FaGithubSquare/></a>
+                  <a href="https://github.com/satyajeetmaharana" target="_blank" rel="noopener noreferrer"><FaGithubSquare/></a>&nbsp;&nbsp;
+                  <a href="mailto:satyajeet@nyu.edu" target="_blank" rel="noopener noreferrer"><FaEnvelope/></a>
                 </div>
               </Fade>
             </IconContext.Provider>
