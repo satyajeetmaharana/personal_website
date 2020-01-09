@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
 import "./layout.css"
 
 import Image from "../components/image"
@@ -40,8 +39,8 @@ const Layout = ({ children }) => {
         <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>a software engineer.</div>
         <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
           <div>
-            <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank"><FaLinkedin/></a>&nbsp;&nbsp;
-            <a href="https://github.com/satyajeetmaharana" target="_blank"><FaGithubSquare/></a>
+            <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>&nbsp;&nbsp;
+            <a href="https://github.com/satyajeetmaharana" target="_blank" rel="noopener noreferrer"><FaGithubSquare/></a>
           </div>
         </IconContext.Provider>
       </div>
@@ -68,9 +67,9 @@ const Layout = ({ children }) => {
         <footer style={{color:'white',backgroundColor:'black',padding:'1rem',textAlign:'center'}}>
           © Satyajeet Maharana | New York City, {new Date().getFullYear()} <br/> Built with
           {` `}
-          <a href="https://reactjs.org/" style={{textDecoration:'underline',color:'white'}} target="_blank">React <FaReact size='15'/></a>
+          <a href="https://reactjs.org/" style={{textDecoration:'underline',color:'white'}} target="_blank" rel="noopener noreferrer">React <FaReact size='15'/></a>
           &nbsp;&&nbsp;
-          <a href="https://www.gatsbyjs.org/" style={{textDecoration:'underline',color:'white'}} target="_blank">Gatsby <FaExternalLinkAlt size='15'/></a>
+          <a href="https://www.gatsbyjs.org/" style={{textDecoration:'underline',color:'white'}} target="_blank" rel="noopener noreferrer">Gatsby <FaExternalLinkAlt size='15'/></a>
         </footer>
       </div>
     </>

@@ -1,8 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import '../style/index.css'
 
@@ -20,8 +18,8 @@ const IndexPage = () => (
             <IconContext.Provider value={{size:'2em', className: "contact-icons-bottom"}} >
               <Fade right big cascade >
                 <div>
-                  <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank"><FaLinkedin/></a>&nbsp;&nbsp;
-                  <a href="https://github.com/satyajeetmaharana" target="_blank"><FaGithubSquare/></a>
+                  <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>&nbsp;&nbsp;
+                  <a href="https://github.com/satyajeetmaharana" target="_blank" rel="noopener noreferrer"><FaGithubSquare/></a>
                 </div>
               </Fade>
             </IconContext.Provider>
