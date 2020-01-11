@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
       </div>
       <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
         <div style={{fontSize:'3em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Hi, I'm Satyajeet.</div>
-        <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>a software engineer.</div>
+        <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
         <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
           <div>
             <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>&nbsp;&nbsp;
