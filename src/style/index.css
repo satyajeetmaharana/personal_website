@@ -13,3 +13,59 @@
 .link-to-section:hover {
     color:#60d89e !important;
 }
+
+
+.head-links{
+    color:black;
+    background-color: white;
+}
+
+.social-icons{
+    position:sticky;
+    z-index:100;
+    left:90%;
+    top :10%;
+    color:white;
+    padding:1rem;
+    text-align:center;
+    width:14%;
+    margin-left:1%;
+}
+
+
+
+.head-section{
+    position:sticky;
+    z-index:100;
+    top:30%;
+    background-color:black;
+    color:white;
+    padding:1rem;
+    text-align:center;
+    width:11%;
+    margin-left:1%;
+}
+    
+.section-header{
+    color:#35db8b;
+    text-align:center;
+}
+
+
+.div-with-padding{
+    padding-left:15%;
+    padding-right:15%;
+}
+
+.div-section-space{
+    height:4rem;
+}
+
+.company-college-name{
+    margin: auto;
+    text-align:center;
+}
+
+.justified-content{
+    text-align:justify;
+}

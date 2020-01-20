@@ -9,12 +9,25 @@ import Fade from 'react-reveal/Fade';
 import {FaLinkedin,FaGithubSquare,FaEnvelope } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 
+import { layoutGenerator } from 'react-break';
+
+const layout = layoutGenerator({
+  mobile: 0,
+  phablet: 550,
+  tablet: 768,
+  desktop: 992,
+});
+
+const OnMobile = layout.is('mobile');
+const OnAtLeastTablet = layout.isAtLeast('tablet');
+const OnAtMostPhablet = layout.isAtMost('phablet');
+const OnDesktop = layout.is('desktop');
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div style={{backgroundColor:'white',color:'black'}} id="head-links">
-        
-          <div style={{position:'sticky',zIndex:'100',left:'90%', top : '10%',color:'white',padding:'1rem',textAlign:'center',width:'14%',marginLeft:'1%'}}>
+    <div className="head-links" id="head-links">
+          <div className="social-icons">
             <IconContext.Provider value={{size:'2em', className: "contact-icons-bottom"}} >
               <Fade right big cascade >
                 <div>
@@ -25,30 +38,30 @@ const IndexPage = () => (
               </Fade>
             </IconContext.Provider>
           </div>
-        
-        <div style={{position:'sticky',zIndex:'100',top:'30%',backgroundColor:'black',color:'white',padding:'1rem',textAlign:'center',width:'11%',marginLeft:'1%'}}>
-          <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a">
-              <a href="#AboutSec" className="link-to-section">About<br/></a>
-              <a href="#Skills" className="link-to-section">Skills<br/></a>
-              <a href="#Education" className="link-to-section">Education<br/></a>
-              <a href="#Experience" className="link-to-section">Experience<br/></a>
-              <a href="#Projects" className="link-to-section">Projects<br/></a>
-          </Scrollspy>
-        </div>
-        
+        <OnDesktop>
+          <div className="head-section">
+            <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a">
+                <a href="#AboutSec" className="link-to-section">About<br/></a>
+                <a href="#Skills" className="link-to-section">Skills<br/></a>
+                <a href="#Education" className="link-to-section">Education<br/></a>
+                <a href="#Experience" className="link-to-section">Experience<br/></a>
+                <a href="#Projects" className="link-to-section">Projects<br/></a>
+            </Scrollspy>
+          </div>
+        </OnDesktop>
         <div style={{display:'flex',paddingLeft:'15%',paddingRight:'15%',marginTop:'-100px'}} >
           <div style={{flex:'1'}}>
-            <h1 style={{color:'#35db8b',textAlign:'center'}} id="AboutSec">About</h1>
+            <h1 className="section-header" id="AboutSec">About</h1>
             <br/>
             <p style={{textAlign:'center'}} >
               Satyajeet is an engineer, focused on Software Development. 
             </p>
           </div>
         </div>
-        <div style={{height:'4rem'}}></div>
+        <div className="div-section-space"></div>
         <div style={{display:'flex',paddingLeft:'15%',paddingRight:'15%'}} >
           <div style={{flex:'1'}}>
-            <h1 style={{color:'#35db8b',textAlign:'center'}} id="Skills">Skills</h1>
+            <h1 className="section-header" id="Skills">Skills</h1>
             <br/>
             <div style={{display:'flex',textAlign:'center',flexDirection:'column'}}>
               <div style={{flex:'1'}}>
@@ -94,14 +107,14 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{height:'4rem'}}></div>
+        <div className="div-section-space"></div>
         
-        <div style={{paddingLeft:'15%',paddingRight:'15%'}} id="Education">
-          <h1 style={{color:'#35db8b',textAlign:'center'}} >Education</h1>
+        <div className="div-with-padding" id="Education">
+          <h1 className="section-header">Education</h1>
           <div>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>
+                  <p className="company-college-name">
                     <div><b>New York University</b></div>
                     <div style={{color:'gray'}}>May 2020</div>
                   </p>
@@ -115,7 +128,7 @@ const IndexPage = () => (
             <br/>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>
+                  <p className="company-college-name">
                     <div><b>KIIT University</b></div>
                     <div style={{color:'gray'}}>May 2015</div>
                   </p>
@@ -127,37 +140,40 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{height:'4rem'}}></div>
-        <div style={{paddingLeft:'15%',paddingRight:'15%'}} id="Experience">
-          <h1 style={{color:'#35db8b',textAlign:'center'}} >Experience</h1>
+        <div className="div-section-space"></div>
+        <div className="div-with-padding" id="Experience">
+          <h1 className="section-header">Experience</h1>
           <div >
             <div style={{display:'flex'}} >
               <div style={{flex:'1'}}>
-                <p style={{margin: 'auto',textAlign:'center'}}>
+                <p className="company-college-name">
                     <div><b>Altice USA</b></div>
                     <div style={{color:'gray'}}>Jun 2019-Aug 2019</div>
                 </p>
               </div>
               <div style={{flex:'1'}}>
                 <p><b>Software Intern</b></p>
-                <p style={{textAlign: 'justify'}}>
+                <p className="justified-content">
                   <ul>
                     <li>Revamped the sales and services platform by developing scalable and responsive business applications using Java which led to streamlined business process and improved user experience</li>
                   </ul>
                 </p>
               </div>
             </div>
+            <div>
+              
+            </div>
             <br/>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>
+                  <p className="company-college-name">
                     <div><b>Deloitte</b></div>
                     <div style={{color:'gray'}}>Aug 2017-Aug 2018</div>
                    </p>
               </div>
               <div style={{flex:'1'}}>
                 <p><b>Software Engineer</b></p>
-                <p style={{textAlign: 'justify'}}>
+                <p className="justified-content">
                   <ul>
                     <li>Developed a "Next Best Opportunity and Lead recommender system" based on customer preferences, prospect engagement, and competitor involvement, which helped Sales Team make data-driven decisions</li>
                     <li>Optimized code and re-engineered existing system architecture; reduced costs for future enhancements and maintenance by 30%</li>
@@ -170,14 +186,14 @@ const IndexPage = () => (
             <br/>
             <div style={{display:'flex'}}>
               <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>
+                  <p className="company-college-name">
                     <div><b>Accenture</b></div>
                     <div style={{color:'gray'}}>Jul 2015-Aug 2017</div>
                    </p>
               </div>
               <div style={{flex:'1'}}>
                 <p><b>Software Engineer</b></p>
-                <p style={{textAlign: 'justify'}}>
+                <p className="justified-content">
                   <ul>
                     <li>Led the customer services team to develop case routing algorithms for classification of new service requests; increased service requests closer rate by ~20%</li>
                     <li>Analyzed and developed a prototype for a chatbot which simplified querying and executing routine tasks on customer service requests</li>
@@ -188,14 +204,14 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div style={{height:'4rem'}}></div>
-        <div style={{paddingLeft:'15%',paddingRight:'15%'}} id="Projects">
-          <h1 style={{color:'#35db8b',textAlign:'center'}}>Projects</h1>
+        <div className="div-section-space"></div>
+        <div className="div-with-padding" id="Projects">
+          <h1 className="section-header">Projects</h1>
           <div >
               <b>
                 Hand Movement Detection & Scene Prediction in EgoHands Video Dataset
               </b>
-              <p style={{textAlign: 'justify'}}>
+              <p className="justified-content">
                 The goal of this project is to detect hands in the videos and predict the scene based on the hand actions using Deep Learning techniques.
                 <br/>
                 Architected and trained two recurrent convolutional neural networks:
@@ -209,19 +225,19 @@ const IndexPage = () => (
               <b>
                 Community detection in networks with fuzzy boundaries
               </b>
-              <p style={{textAlign: 'justify'}}>In this paper, we presented simple yet effective ideas to sharpen the fuzzy boundaries between the communities in networks and proposed two algorithms for community detection known as SHCD and SRSTCD. We have used the concept of social harmony, space reduction and space transformation, and complement network for a given network in identify the fuzzy boundaries between the communities more accurately. Presented at the ADM-MLDM Conference 2019, New York.</p>
+              <p className="justified-content">In this paper, we presented simple yet effective ideas to sharpen the fuzzy boundaries between the communities in networks and proposed two algorithms for community detection known as SHCD and SRSTCD. We have used the concept of social harmony, space reduction and space transformation, and complement network for a given network in identify the fuzzy boundaries between the communities more accurately. Presented at the ADM-MLDM Conference 2019, New York.</p>
             </div>
             <div>
               <b>Hard Drive Failure Prediction using Machine Learning Methods</b>
-              <p style={{textAlign: 'justify'}}>The goal of our project is to identify hard disks which are at a risk of failing in a future time period. Our Machine learning model is trained on data obtained from several hard drive manufacturers, a publicly available dataset from Backblaze. Even with a highly skewed dataset, a base rate of 0.39%, we achieved recall of 0.89, precision of 0.85 and AUC ROC of 0.87 using AdaBoosted Decision Tree Classifier.</p>
+              <p className="justified-content">The goal of our project is to identify hard disks which are at a risk of failing in a future time period. Our Machine learning model is trained on data obtained from several hard drive manufacturers, a publicly available dataset from Backblaze. Even with a highly skewed dataset, a base rate of 0.39%, we achieved recall of 0.89, precision of 0.85 and AUC ROC of 0.87 using AdaBoosted Decision Tree Classifier.</p>
             </div>
             <div>
               <b>Flood Prediction in the U.S. using Machine Learning Methods</b>
-              <p style={{textAlign: 'justify'}}>The goal of our project is to identify the flood-prone areas with probabilities of flooding in counties in a future date. We used Hadoop and Apache Spark MLlib package to train different ML models and used Grid Search algorithm for hyperparameter tuning. Out of all the different models, the Random Forrest Regressor performed the best with accuracy of 80%, precision of 0.85, recall of 0.80 and F1 score of 0.82.</p>
+              <p className="justified-content">The goal of our project is to identify the flood-prone areas with probabilities of flooding in counties in a future date. We used Hadoop and Apache Spark MLlib package to train different ML models and used Grid Search algorithm for hyperparameter tuning. Out of all the different models, the Random Forrest Regressor performed the best with accuracy of 80%, precision of 0.85, recall of 0.80 and F1 score of 0.82.</p>
             </div>
             <div>
               <b>Programming Languages Trend and Sentiment Analysis</b>
-              <p style={{textAlign: 'justify'}}>Scraped StackOverflow and StackExchange data from 2010 through 2017 and performed data analysis on raw posts and comments data to gain insights about the upcoming programming languages and the overall satisfaction of the developer communities by the Sentiment analysis of the comments using NLTK, Pandas, NumPy, Matplotlib, Seaborn. We mitigated the challenge of having more than 100 GB of raw textual data by pre-processing our dataset on HDFS.</p>
+              <p className="justified-content">Scraped StackOverflow and StackExchange data from 2010 through 2017 and performed data analysis on raw posts and comments data to gain insights about the upcoming programming languages and the overall satisfaction of the developer communities by the Sentiment analysis of the comments using NLTK, Pandas, NumPy, Matplotlib, Seaborn. We mitigated the challenge of having more than 100 GB of raw textual data by pre-processing our dataset on HDFS.</p>
             </div>
         </div>
     </div>
