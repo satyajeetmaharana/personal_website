@@ -7,7 +7,7 @@ import Image from "../components/image"
 import { FiArrowDownCircle } from 'react-icons/fi';
 import { FaExternalLinkAlt, FaReact, FaLinkedin,FaGithubSquare,FaEnvelope } from 'react-icons/fa';
 import { IconContext } from "react-icons";
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 
 
 
