@@ -1,6 +1,8 @@
+
 /* eslint-disable jsx-a11y/accessible-emoji */
-import React, { useState, useEffect } from "react";
 import "./navbar.css";
+import React, { useState, useEffect } from "react";
+
 import { CSSTransition } from "react-transition-group";
 
 import { FaHamburger} from 'react-icons/fa';

@@ -1,8 +1,10 @@
+import '../style/index.css'
 import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import '../style/index.css'
+import { useMediaQuery } from 'react-responsive'
+
 
 import Scrollspy from 'react-scrollspy'
 import Fade from 'react-reveal/Fade';
@@ -15,7 +17,7 @@ import KLogo from "../images/kiit_logo.png";
 import A2Logo from "../images/acc.png";
 import DLogo from "../images/d.png";
 
-import { useMediaQuery } from 'react-responsive'
+
 
 
 const Desktop = ({ children }) => {

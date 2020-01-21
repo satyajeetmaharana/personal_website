@@ -5,33 +5,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useMediaQuery } from 'react-responsive'
 import Navbar from "../components/navbar"
 
-
-
 import Image from "../components/image"
 import { FiArrowDownCircle } from 'react-icons/fi';
 import { FaExternalLinkAlt, FaReact, FaLinkedin,FaGithubSquare,FaEnvelope } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import { Link } from "gatsby"
-
-
-
-const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 1024 })
-  const isPotrait = useMediaQuery({ orientation: 'portrait' })
-  return isDesktop && !isPotrait ? children : null
-}
-const Tablet = ({ children }) => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 })
-  const isPotrait = useMediaQuery({ orientation: 'portrait' })
-  return isTablet || isPotrait ? children : null
-}
-const Mobile = ({ children }) => {
-  const isMobile = useMediaQuery({ maxWidth: 767 })
-  const isPotrait = useMediaQuery({ orientation: 'portrait' })
-  return isMobile || isPotrait? children : null
-}
-
-
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -48,19 +26,23 @@ const Layout = ({ children }) => {
     require("smooth-scroll")('a[href*="#"]')
   }
 
-  const headingStyle = {
-    fontSize:'4em',
-    color:'white',
-    fontWeight:'500',
-    textShadow: '2px 2px 4px #000000'
-  };
-  
-  const mobileHeadingStyle = {
-    fontSize:'3rem',
-    color:'white',
-    fontWeight:'500',
-    textShadow: '2px 2px 4px #000000'
-  };
+  const Desktop = ({ children }) => {
+    const isDesktop = useMediaQuery({ minWidth: 1024 })
+    const isPotrait = useMediaQuery({ orientation: 'portrait' })
+    return isDesktop && !isPotrait ? children : null
+  }
+  const Tablet = ({ children }) => {
+    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 })
+    const isPotrait = useMediaQuery({ orientation: 'portrait' })
+    return isTablet || isPotrait ? children : null
+  }
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 })
+    const isPotrait = useMediaQuery({ orientation: 'portrait' })
+    return isMobile || isPotrait? children : null
+  }
+
+ 
   return (
     <>
       
@@ -69,10 +51,10 @@ const Layout = ({ children }) => {
       </div>
       <div style={{position:'fixed',width:'100%',height:'100%',top:'0',bottom:'0',left:'0',right:'0',backgroundColor:'rgba(0,0,0,0.5)'}}>
       </div>
-      <div className='intro-class'>
+      <div style={{position: 'absolute',top:'50%',left:'50%',transform: 'translate(-50%, -50%)',textAlign: 'center'}}>
         <Desktop>
-          <div className='intro-class'>
-              <div style={headingStyle}>Hi, I'm Satyajeet.</div>
+          <div style={{position: 'absolute',top:'50%',left:'50%',transform: 'translate(-50%, -50%)',textAlign: 'center'}}>
+              <div style={{fontSize:'4em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Hi, I'm Satyajeet.</div>
               <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
               <div>
                 <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
@@ -95,13 +77,13 @@ const Layout = ({ children }) => {
             </IconContext.Provider>
         </div>
         */}
-      <div>
+      <div style={{position: 'absolute',top:'50%',left:'50%',transform: 'translate(-50%, -50%)',textAlign: 'center'}}>
         <Mobile>
           <div>
             <Navbar/>
           </div>
           <div style={{position:'absolute',top:'20%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
-              <div style={mobileHeadingStyle}>Hi, I'm Satyajeet.</div>
+              <div  style={{fontSize:'3em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Hi, I'm Satyajeet.</div>
               <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
               <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
                 <div>
@@ -114,13 +96,13 @@ const Layout = ({ children }) => {
         </Mobile>
       </div>
 
-      <div>
+      <div style={{position: 'absolute',top:'50%',left:'50%',transform: 'translate(-50%, -50%)',textAlign: 'center'}}>
         <Tablet>
           <div>
             <Navbar/>
           </div>
           <div style={{position:'absolute',top:'20%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
-              <div style={mobileHeadingStyle}>Hi, I'm Satyajeet.</div>
+              <div  style={{fontSize:'3em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Hi, I'm Satyajeet.</div>
               <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
             <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
               <div>
