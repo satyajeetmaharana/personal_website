@@ -11,6 +11,7 @@ import { IconContext } from "react-icons";
 
 import ALogo from "../images/a4_logo_rgb.jpg";
 import NLogo from "../images/nyu.png";
+import KLogo from "../images/kiit_logo.png";
 import A2Logo from "../images/acc.png";
 import DLogo from "../images/d.png";
 
@@ -106,30 +107,52 @@ const IndexPage = () => (
         <div style={{paddingLeft:'20%',paddingRight:'20%'}} id="Education">
           <h1 style={{color:'#35db8b',textAlign:'center'}} >Education</h1>
           <div>
-            <div style={{display:'flex'}}>
-              <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>
+            {/*
+            * 
+            * 
+            * *************************** NYU SECTION ****************************
+            * 
+            * 
+            */}
+            <div>
+              <div style={{textAlign:'center'}} >
+                <p style={{margin: 'auto',textAlign:'center',fontSize:'130%'}}>
+                    <div><img src={NLogo} className='logos'/></div>
                     <div><b>New York University</b></div>
-                    <div style={{color:'gray'}}>May 2020</div>
-                  </p>
+                </p>
               </div>
-              <div style={{flex:'1',textAlign:'justify'}}>
-                  <p><b>Master of Science in Computer Science</b></p>
+              <div>
+                <div style={{textAlign:'center',color:'gray'}}>
+                  <b>Master of Science in Computer Science</b>
+                  <div>Sep 2018-May 2020</div>
+                </div> 
+                <br/>
+                <div style={{textAlign: 'center'}}>
                   <p><b>Relevant Coursework:</b>&nbsp;Database Systems, Fundamental Algorithms, Operating Systems, Data Science for Business Analytics, Big Data Application Development</p>
-                  <p><b>GPA:</b>&nbsp;3.815/4</p>
+                  <p style={{textAlign:'center',fontSize:'110%'}}><b>GPA:</b>&nbsp;3.815/4</p>
+                </div>
               </div>
             </div>
             <br/>
-            <div style={{display:'flex'}}>
-              <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>
+            {/*
+            * 
+            * 
+            * *************************** KIIT SECTION ****************************
+            * 
+            * 
+            */}
+            <div>
+              <div style={{textAlign:'center'}} >
+                <p style={{margin: 'auto',textAlign:'center',fontSize:'130%'}}>
+                    <div><img src={KLogo} className='logos'/></div>
                     <div><b>KIIT University</b></div>
-                    <div style={{color:'gray'}}>May 2015</div>
-                  </p>
+                </p>
               </div>
-              <div style={{flex:'1'}}>
-                <p><b>Bachelor of Technology in Electronics & Telecommunication</b></p>
-                <p><b>GPA:</b>&nbsp;7.86/10</p>
+              <div>
+                <div style={{textAlign:'center',color:'gray'}}>
+                  <b>Bachelor of Technology in Electronics & Telecommunication</b>
+                  <div>Sep 2018-May 2020</div>
+                </div>
               </div>
             </div>
           </div>
