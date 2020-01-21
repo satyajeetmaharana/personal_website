@@ -79,6 +79,15 @@ const Layout = ({ children }) => {
             </div>
           </IconContext.Provider>
         </div>
+        {/*
+        <div className="bounce" style={{position:'absolute',top:'90%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
+            <IconContext.Provider value={{ size: "3rem", color: "white"}}>
+              <div>
+                <Link to="/#head-links"><FiArrowDownCircle /></Link>
+              </div>
+            </IconContext.Provider>
+        </div>
+        */}
       </Desktop>
 
 
@@ -120,13 +129,7 @@ const Layout = ({ children }) => {
           </IconContext.Provider>
         </div>
       </Tablet>
-      <div className="bounce" style={{position:'absolute',top:'90%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
-          <IconContext.Provider value={{ size: "3rem", color: "white"}}>
-            <div>
-              <Link to="/#head-links"><FiArrowDownCircle /></Link>
-            </div>
-          </IconContext.Provider>
-      </div>
+      
       <div
         style={{
           margin: `0 auto`,
