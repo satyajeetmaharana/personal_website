@@ -117,7 +117,7 @@ const IndexPage = () => (
             <div>
               <div style={{textAlign:'center'}} >
                 <p style={{margin: 'auto',textAlign:'center',fontSize:'130%'}}>
-                    <div><img src={NLogo} className='logos'/></div>
+                    <div><img src={NLogo} className='logos'alt="New York University"/></div>
                     <div><b>New York University</b></div>
                 </p>
               </div>
@@ -144,7 +144,7 @@ const IndexPage = () => (
             <div>
               <div style={{textAlign:'center'}} >
                 <p style={{margin: 'auto',textAlign:'center',fontSize:'130%'}}>
-                    <div><img src={KLogo} className='logos'/></div>
+                    <div><img src={KLogo} className='logos' alt="KIIT University"/></div>
                     <div><b>KIIT University</b></div>
                 </p>
               </div>
@@ -171,7 +171,7 @@ const IndexPage = () => (
             <div>
               <div style={{textAlign:'center'}} >
                 <p style={{margin: 'auto',textAlign:'center',fontSize:'130%'}}>
-                    <div><img src={ALogo} className='logos'/></div>
+                    <div><img src={ALogo} className='logos' alt="Altice USA"/></div>
                     <div><b>Altice USA</b></div>
                 </p>
               </div>
@@ -198,7 +198,7 @@ const IndexPage = () => (
             <div>
               <div style={{textAlign:'center'}} >
                 <p style={{margin: 'auto',textAlign:'center',fontSize:'130%'}}>
-                    <div><img src={DLogo} className='logos'/></div>
+                    <div><img src={DLogo} className='logos' alt="Deloitte"/></div>
                     <div><b>Deloitte</b></div>
                 </p>
               </div>
@@ -228,7 +228,7 @@ const IndexPage = () => (
             <div>
               <div style={{textAlign:'center'}} >
                 <p style={{margin: 'auto',textAlign:'center',fontSize:'130%'}}>
-                    <div><img src={A2Logo} className='logos'/></div>
+                    <div><img src={A2Logo} className='logos' alt="Accenture"/></div>
                     <div><b>Accenture</b></div>
                 </p>
               </div>
@@ -246,9 +246,6 @@ const IndexPage = () => (
                 </p>
               </div>
             </div>
-
-
-
           </div>
         </div>
         <div style={{height:'4rem'}}></div>
