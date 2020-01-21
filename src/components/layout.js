@@ -3,7 +3,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { useMediaQuery } from 'react-responsive'
-import Navbar from "../components/navbar"
+//import Navbar from "../components/navbar"
 
 import Image from "../components/image"
 import { FiArrowDownCircle } from 'react-icons/fi';
@@ -79,9 +79,9 @@ const Layout = ({ children }) => {
         */}
       <div style={{position: 'absolute',top:'50%',left:'50%',transform: 'translate(-50%, -50%)',textAlign: 'center'}}>
         <Mobile>
-          <div>
+          {/*<div>
             <Navbar/>
-          </div>
+          </div>*/}
           <div style={{position:'absolute',top:'20%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
               <div  style={{fontSize:'3em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Hi, I'm Satyajeet.</div>
               <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
@@ -98,9 +98,9 @@ const Layout = ({ children }) => {
 
       <div style={{position: 'absolute',top:'50%',left:'50%',transform: 'translate(-50%, -50%)',textAlign: 'center'}}>
         <Tablet>
-          <div>
+          {/*<div>
             <Navbar/>
-          </div>
+          </div>*/}
           <div style={{position:'absolute',top:'20%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
               <div  style={{fontSize:'3em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Hi, I'm Satyajeet.</div>
               <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
