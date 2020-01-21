@@ -15,13 +15,20 @@ import KLogo from "../images/kiit_logo.png";
 import A2Logo from "../images/acc.png";
 import DLogo from "../images/d.png";
 
+import { useMediaQuery } from 'react-responsive'
 
+
+const Desktop = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 1024 })
+  const isPotrait = useMediaQuery({ orientation: 'portrait' })
+  return isDesktop && !isPotrait ? children : null
+}
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div style={{backgroundColor:'white',color:'black'}} id="head-links">
-        
+          
           <div style={{position:'sticky',zIndex:'100',left:'90%', top : '10%',color:'white',padding:'1rem',textAlign:'center',width:'14%',marginLeft:'1%'}}>
             <IconContext.Provider value={{size:'2em', className: "contact-icons-bottom"}} >
               <Fade right big cascade >
@@ -33,17 +40,17 @@ const IndexPage = () => (
               </Fade>
             </IconContext.Provider>
           </div>
-        
-        <div style={{position:'sticky',zIndex:'100',top:'30%',backgroundColor:'black',color:'white',padding:'1%',textAlign:'center',width:'11%',marginLeft:'1%'}}>
-          <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="div">
-              <div className="link-to-section"><a href="#AboutSec">About<br/></a></div>
-              <div className="link-to-section"><a href="#Skills">Skills<br/></a></div>
-              <div className="link-to-section"><a href="#Education">Education<br/></a></div>
-              <div className="link-to-section"><a href="#Experience">Experience<br/></a></div>
-              <div className="link-to-section"><a href="#Projects">Projects<br/></a></div>
-          </Scrollspy>
-        </div>
-        
+        <Desktop>
+          <div style={{position:'sticky',zIndex:'100',top:'30%',backgroundColor:'black',color:'white',padding:'1%',textAlign:'center',width:'14%',minWidth:'13%',marginLeft:'1%'}}>
+            <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="div">
+                <div className="link-to-section"><a href="#AboutSec">About<br/></a></div>
+                <div className="link-to-section"><a href="#Skills">Skills<br/></a></div>
+                <div className="link-to-section"><a href="#Education">Education<br/></a></div>
+                <div className="link-to-section"><a href="#Experience">Experience<br/></a></div>
+                <div className="link-to-section"><a href="#Projects">Projects<br/></a></div>
+            </Scrollspy>
+          </div>
+        </Desktop>
         <div style={{display:'flex',paddingLeft:'20%',paddingRight:'20%',marginTop:'-100px'}} >
           <div style={{flex:'1'}}>
             <h1 style={{color:'#35db8b',textAlign:'center'}} id="AboutSec">About</h1>
