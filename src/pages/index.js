@@ -1,9 +1,11 @@
 import '../style/index.css'
-import React from "react"
+import React, { useState, useEffect } from "react";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { useMediaQuery } from 'react-responsive'
+
+
+import { CSSTransition } from "react-transition-group";
 
 
 import Scrollspy from 'react-scrollspy'
@@ -17,17 +19,33 @@ import KLogo from "../images/kiit_logo.png";
 import A2Logo from "../images/acc.png";
 import DLogo from "../images/d.png";
 
+export default function Header() {
+  const [isNavVisible, setNavVisibility] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
+    mediaQuery.addListener(handleMediaQueryChange);
+    handleMediaQueryChange(mediaQuery);
 
+    return () => {
+      mediaQuery.removeListener(handleMediaQueryChange);
+    };
+  }, []);
 
-const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 1024 })
-  const isPotrait = useMediaQuery({ orientation: 'portrait' })
-  return isDesktop && !isPotrait ? children : null
-}
+  const handleMediaQueryChange = mediaQuery => {
+    if (mediaQuery.matches) {
+      setIsSmallScreen(true);
+    } else {
+      setIsSmallScreen(false);
+    }
+  };
 
-const IndexPage = () => (
-  <Layout>
+  const toggleNav = () => {
+    setNavVisibility(!isNavVisible);
+  };
+
+  return (<Layout>
     <SEO title="Home" />
     <div style={{backgroundColor:'white',color:'black'}} id="head-links">
           
@@ -42,7 +60,7 @@ const IndexPage = () => (
               </Fade>
             </IconContext.Provider>
           </div>
-        <Desktop>
+        {/*<Desktop>
           <div style={{position:'sticky',zIndex:'100',top:'30%',backgroundColor:'black',color:'white',padding:'1%',textAlign:'center',width:'14%',minWidth:'13%',marginLeft:'1%'}}>
             <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="div">
                 <div className="link-to-section"><a href="#AboutSec">About<br/></a></div>
@@ -52,7 +70,25 @@ const IndexPage = () => (
                 <div className="link-to-section"><a href="#Projects">Projects<br/></a></div>
             </Scrollspy>
           </div>
-        </Desktop>
+        </Desktop>*/}
+        <CSSTransition
+          in={!isSmallScreen || isNavVisible}
+          timeout={350}
+          classNames="NavAnimation"
+          unmountOnExit
+        >
+          <div style={{position:'sticky',zIndex:'100',top:'30%',backgroundColor:'black',color:'white',padding:'1%',textAlign:'center',width:'14%',minWidth:'13%',marginLeft:'1%'}}>
+            <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="div">
+                <div className="link-to-section"><a href="#AboutSec">About<br/></a></div>
+                <div className="link-to-section"><a href="#Skills">Skills<br/></a></div>
+                <div className="link-to-section"><a href="#Education">Education<br/></a></div>
+                <div className="link-to-section"><a href="#Experience">Experience<br/></a></div>
+                <div className="link-to-section"><a href="#Projects">Projects<br/></a></div>
+            </Scrollspy>
+          </div>
+        </CSSTransition>
+
+
         <div style={{display:'flex',paddingLeft:'20%',paddingRight:'20%',marginTop:'-100px'}} >
           <div style={{flex:'1'}}>
             <h1 style={{color:'#35db8b',textAlign:'center'}} id="AboutSec">About</h1>
@@ -290,7 +326,10 @@ const IndexPage = () => (
             </div>
         </div>
     </div>
-  </Layout>
-)
+  </Layout>);
+}
 
-export default IndexPage
+
+//const IndexPage = () => ()
+
+//export default IndexPage
