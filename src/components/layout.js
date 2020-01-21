@@ -65,7 +65,7 @@ const Layout = ({ children }) => {
       </div>
       <div style={{position:'fixed',width:'100%',height:'100%',top:'0',bottom:'0',left:'0',right:'0',backgroundColor:'rgba(0,0,0,0.5)'}}>
       </div>
-      <div>
+      <div className='intro-class'>
         <Desktop>
           <div className='intro-class'>
               <div style={headingStyle}>Hi, I'm Satyajeet.</div>
