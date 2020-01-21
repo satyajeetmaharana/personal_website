@@ -1,7 +1,11 @@
+import "./layout.css"
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import "./layout.css"
+import { useMediaQuery } from 'react-responsive'
+import Navbar from "../components/navbar"
+
+
 
 import Image from "../components/image"
 import { FiArrowDownCircle } from 'react-icons/fi';
@@ -9,9 +13,7 @@ import { FaExternalLinkAlt, FaReact, FaLinkedin,FaGithubSquare,FaEnvelope } from
 import { IconContext } from "react-icons";
 import { Link } from "gatsby"
 
-import { useMediaQuery } from 'react-responsive'
 
-import Navbar from "../components/navbar"
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 1024 })
@@ -29,19 +31,7 @@ const Mobile = ({ children }) => {
   return isMobile || isPotrait? children : null
 }
 
-const headingStyle = {
-  fontSize:'4em',
-  color:'white',
-  fontWeight:'500',
-  textShadow: '2px 2px 4px #000000'
-};
 
-const mobileHeadingStyle = {
-  fontSize:'3rem',
-  color:'white',
-  fontWeight:'500',
-  textShadow: '2px 2px 4px #000000'
-};
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -57,6 +47,20 @@ const Layout = ({ children }) => {
     // eslint-disable-next-line global-require
     require("smooth-scroll")('a[href*="#"]')
   }
+
+  const headingStyle = {
+    fontSize:'4em',
+    color:'white',
+    fontWeight:'500',
+    textShadow: '2px 2px 4px #000000'
+  };
+  
+  const mobileHeadingStyle = {
+    fontSize:'3rem',
+    color:'white',
+    fontWeight:'500',
+    textShadow: '2px 2px 4px #000000'
+  };
   return (
     <>
       
