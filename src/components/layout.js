@@ -65,23 +65,23 @@ const Layout = ({ children }) => {
       </div>
       <div style={{position:'fixed',width:'100%',height:'100%',top:'0',bottom:'0',left:'0',right:'0',backgroundColor:'rgba(0,0,0,0.5)'}}>
       </div>
-      <Desktop>
-
-      
-        <div className='intro-class'>
-            <div style={headingStyle}>Hi, I'm Satyajeet.</div>
-            <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
-            <div>
-              <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
-                <div>
-                    <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>&nbsp;&nbsp;
-                    <a href="https://github.com/satyajeetmaharana" target="_blank" rel="noopener noreferrer"><FaGithubSquare/></a>&nbsp;&nbsp;
-                    <a href="mailto:satyajeet@nyu.edu" target="_blank" rel="noopener noreferrer"><FaEnvelope/></a>
-                  </div>
-                </IconContext.Provider>
-              </div>
-          </div>
-        </Desktop>
+      <div>
+        <Desktop>
+          <div className='intro-class'>
+              <div style={headingStyle}>Hi, I'm Satyajeet.</div>
+              <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
+              <div>
+                <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
+                  <div>
+                      <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>&nbsp;&nbsp;
+                      <a href="https://github.com/satyajeetmaharana" target="_blank" rel="noopener noreferrer"><FaGithubSquare/></a>&nbsp;&nbsp;
+                      <a href="mailto:satyajeet@nyu.edu" target="_blank" rel="noopener noreferrer"><FaEnvelope/></a>
+                    </div>
+                  </IconContext.Provider>
+                </div>
+            </div>
+          </Desktop>
+        </div>
         {/*
         <div className="bounce" style={{position:'absolute',top:'90%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
             <IconContext.Provider value={{ size: "3rem", color: "white"}}>
@@ -91,13 +91,33 @@ const Layout = ({ children }) => {
             </IconContext.Provider>
         </div>
         */}
-      <Mobile>
-        <div>
-          <Navbar/>
-        </div>
-        <div style={{position:'absolute',top:'20%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
-            <div style={mobileHeadingStyle}>Hi, I'm Satyajeet.</div>
-            <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
+      <div>
+        <Mobile>
+          <div>
+            <Navbar/>
+          </div>
+          <div style={{position:'absolute',top:'20%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
+              <div style={mobileHeadingStyle}>Hi, I'm Satyajeet.</div>
+              <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
+              <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
+                <div>
+                  <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>&nbsp;&nbsp;
+                  <a href="https://github.com/satyajeetmaharana" target="_blank" rel="noopener noreferrer"><FaGithubSquare/></a>&nbsp;&nbsp;
+                  <a href="mailto:satyajeet@nyu.edu" target="_blank" rel="noopener noreferrer"><FaEnvelope/></a>
+                </div>
+              </IconContext.Provider>
+          </div>
+        </Mobile>
+      </div>
+
+      <div>
+        <Tablet>
+          <div>
+            <Navbar/>
+          </div>
+          <div style={{position:'absolute',top:'20%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
+              <div style={mobileHeadingStyle}>Hi, I'm Satyajeet.</div>
+              <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
             <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
               <div>
                 <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>&nbsp;&nbsp;
@@ -105,26 +125,9 @@ const Layout = ({ children }) => {
                 <a href="mailto:satyajeet@nyu.edu" target="_blank" rel="noopener noreferrer"><FaEnvelope/></a>
               </div>
             </IconContext.Provider>
-        </div>
-      </Mobile>
-
-
-      <Tablet>
-        <div>
-          <Navbar/>
-        </div>
-        <div style={{position:'absolute',top:'20%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
-            <div style={mobileHeadingStyle}>Hi, I'm Satyajeet.</div>
-            <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
-          <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
-            <div>
-              <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>&nbsp;&nbsp;
-              <a href="https://github.com/satyajeetmaharana" target="_blank" rel="noopener noreferrer"><FaGithubSquare/></a>&nbsp;&nbsp;
-              <a href="mailto:satyajeet@nyu.edu" target="_blank" rel="noopener noreferrer"><FaEnvelope/></a>
-            </div>
-          </IconContext.Provider>
-        </div>
-      </Tablet>
+          </div>
+        </Tablet>
+      </div>
       
       <div
         style={{
