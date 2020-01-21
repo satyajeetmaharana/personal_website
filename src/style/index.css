@@ -1,4 +1,10 @@
-.is-current{
+div.is-current{
+    border-color: #35db8b;
+    border-bottom: 4px solid #35db8b;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+div.is-current > a{
     color:#35db8b !important;
     transition-delay: 0.02s;
 }
@@ -6,10 +12,27 @@
 .link-to-section{
     text-decoration: none;
     color:white;
+    padding:2%;
+    text-align: center;
+}
+
+div.link-to-section > a{
+    text-decoration: none;
+    color:white;
     padding:10px;
     text-align: center;
 }
 
+div.link-to-section > a:hover{
+    color:#60d89e !important;
+}
+
 .link-to-section:hover {
     color:#60d89e !important;
+}
+
+.logos{
+    width: 10%;
+    max-width: 15%;
+    height: auto;
 }

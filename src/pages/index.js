@@ -9,6 +9,13 @@ import Fade from 'react-reveal/Fade';
 import {FaLinkedin,FaGithubSquare,FaEnvelope } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 
+import ALogo from "../images/a4_logo_rgb.jpg";
+import NLogo from "../images/nyu.png";
+import A2Logo from "../images/acc.png";
+import DLogo from "../images/d.png";
+
+
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -26,17 +33,17 @@ const IndexPage = () => (
             </IconContext.Provider>
           </div>
         
-        <div style={{position:'sticky',zIndex:'100',top:'30%',backgroundColor:'black',color:'white',padding:'1rem',textAlign:'center',width:'11%',marginLeft:'1%'}}>
-          <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="a">
-              <a href="#AboutSec" className="link-to-section">About<br/></a>
-              <a href="#Skills" className="link-to-section">Skills<br/></a>
-              <a href="#Education" className="link-to-section">Education<br/></a>
-              <a href="#Experience" className="link-to-section">Experience<br/></a>
-              <a href="#Projects" className="link-to-section">Projects<br/></a>
+        <div style={{position:'sticky',zIndex:'100',top:'30%',backgroundColor:'black',color:'white',padding:'1%',textAlign:'center',width:'11%',marginLeft:'1%'}}>
+          <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="div">
+              <div className="link-to-section"><a href="#AboutSec">About<br/></a></div>
+              <div className="link-to-section"><a href="#Skills">Skills<br/></a></div>
+              <div className="link-to-section"><a href="#Education">Education<br/></a></div>
+              <div className="link-to-section"><a href="#Experience">Experience<br/></a></div>
+              <div className="link-to-section"><a href="#Projects">Projects<br/></a></div>
           </Scrollspy>
         </div>
         
-        <div style={{display:'flex',paddingLeft:'15%',paddingRight:'15%',marginTop:'-100px'}} >
+        <div style={{display:'flex',paddingLeft:'20%',paddingRight:'20%',marginTop:'-100px'}} >
           <div style={{flex:'1'}}>
             <h1 style={{color:'#35db8b',textAlign:'center'}} id="AboutSec">About</h1>
             <br/>
@@ -46,7 +53,7 @@ const IndexPage = () => (
           </div>
         </div>
         <div style={{height:'4rem'}}></div>
-        <div style={{display:'flex',paddingLeft:'15%',paddingRight:'15%'}} >
+        <div style={{display:'flex',paddingLeft:'20%',paddingRight:'20%'}} >
           <div style={{flex:'1'}}>
             <h1 style={{color:'#35db8b',textAlign:'center'}} id="Skills">Skills</h1>
             <br/>
@@ -96,7 +103,7 @@ const IndexPage = () => (
         </div>
         <div style={{height:'4rem'}}></div>
         
-        <div style={{paddingLeft:'15%',paddingRight:'15%'}} id="Education">
+        <div style={{paddingLeft:'20%',paddingRight:'20%'}} id="Education">
           <h1 style={{color:'#35db8b',textAlign:'center'}} >Education</h1>
           <div>
             <div style={{display:'flex'}}>
@@ -106,7 +113,7 @@ const IndexPage = () => (
                     <div style={{color:'gray'}}>May 2020</div>
                   </p>
               </div>
-              <div style={{flex:'1'}}>
+              <div style={{flex:'1',textAlign:'justify'}}>
                   <p><b>Master of Science in Computer Science</b></p>
                   <p><b>Relevant Coursework:</b>&nbsp;Database Systems, Fundamental Algorithms, Operating Systems, Data Science for Business Analytics, Big Data Application Development</p>
                   <p><b>GPA:</b>&nbsp;3.815/4</p>
@@ -128,18 +135,28 @@ const IndexPage = () => (
           </div>
         </div>
         <div style={{height:'4rem'}}></div>
-        <div style={{paddingLeft:'15%',paddingRight:'15%'}} id="Experience">
+        <div style={{paddingLeft:'20%',paddingRight:'20%'}} id="Experience">
           <h1 style={{color:'#35db8b',textAlign:'center'}} >Experience</h1>
-          <div >
-            <div style={{display:'flex'}} >
-              <div style={{flex:'1'}}>
-                <p style={{margin: 'auto',textAlign:'center'}}>
+          <div>
+            {/*
+             * 
+             * 
+             * *************************** ALTICE EXPERIENCE ****************************
+             * 
+             * 
+             */}
+            <div>
+              <div style={{textAlign:'center'}} >
+                <p style={{margin: 'auto',textAlign:'center',fontSize:'130%'}}>
+                    <div><img src={ALogo} className='logos'/></div>
                     <div><b>Altice USA</b></div>
-                    <div style={{color:'gray'}}>Jun 2019-Aug 2019</div>
                 </p>
               </div>
-              <div style={{flex:'1'}}>
-                <p><b>Software Intern</b></p>
+              <div>
+                <div style={{textAlign:'center',color:'gray'}}>
+                  <b>Software Intern</b>
+                  <div>Jun 2019-Aug 2019</div>
+                </div> 
                 <p style={{textAlign: 'justify'}}>
                   <ul>
                     <li>Revamped the sales and services platform by developing scalable and responsive business applications using Java which led to streamlined business process and improved user experience</li>
@@ -148,15 +165,25 @@ const IndexPage = () => (
               </div>
             </div>
             <br/>
-            <div style={{display:'flex'}}>
-              <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>
+            {/*
+             * 
+             * 
+             * *************************** DELOITTE EXPERIENCE ****************************
+             * 
+             * 
+             */}
+            <div>
+              <div style={{textAlign:'center'}} >
+                <p style={{margin: 'auto',textAlign:'center',fontSize:'130%'}}>
+                    <div><img src={DLogo} className='logos'/></div>
                     <div><b>Deloitte</b></div>
-                    <div style={{color:'gray'}}>Aug 2017-Aug 2018</div>
-                   </p>
+                </p>
               </div>
-              <div style={{flex:'1'}}>
-                <p><b>Software Engineer</b></p>
+              <div>
+                <div style={{textAlign:'center',color:'gray'}}>
+                  <b>Software Engineer</b>
+                  <div>Aug 2017-Aug 2018</div>
+                </div> 
                 <p style={{textAlign: 'justify'}}>
                   <ul>
                     <li>Developed a "Next Best Opportunity and Lead recommender system" based on customer preferences, prospect engagement, and competitor involvement, which helped Sales Team make data-driven decisions</li>
@@ -168,15 +195,25 @@ const IndexPage = () => (
               </div>
             </div>
             <br/>
-            <div style={{display:'flex'}}>
-              <div style={{flex:'1'}}>
-                  <p style={{margin: 'auto',textAlign:'center'}}>
+            {/*
+             * 
+             * 
+             * *************************** ACCENTURE EXPERIENCE ****************************
+             * 
+             * 
+             */}
+            <div>
+              <div style={{textAlign:'center'}} >
+                <p style={{margin: 'auto',textAlign:'center',fontSize:'130%'}}>
+                    <div><img src={A2Logo} className='logos'/></div>
                     <div><b>Accenture</b></div>
-                    <div style={{color:'gray'}}>Jul 2015-Aug 2017</div>
-                   </p>
+                </p>
               </div>
-              <div style={{flex:'1'}}>
-                <p><b>Software Engineer</b></p>
+              <div>
+                <div style={{textAlign:'center',color:'gray'}}>
+                  <b>Software Engineer</b>
+                  <div>Jul 2015-Aug 2017</div>
+                </div> 
                 <p style={{textAlign: 'justify'}}>
                   <ul>
                     <li>Led the customer services team to develop case routing algorithms for classification of new service requests; increased service requests closer rate by ~20%</li>
@@ -186,15 +223,16 @@ const IndexPage = () => (
                 </p>
               </div>
             </div>
+
+
+
           </div>
         </div>
         <div style={{height:'4rem'}}></div>
-        <div style={{paddingLeft:'15%',paddingRight:'15%'}} id="Projects">
+        <div style={{paddingLeft:'20%',paddingRight:'20%'}} id="Projects">
           <h1 style={{color:'#35db8b',textAlign:'center'}}>Projects</h1>
-          <div >
-              <b>
-                Hand Movement Detection & Scene Prediction in EgoHands Video Dataset
-              </b>
+          <div>
+              <p style={{textAlign: 'center'}}><b>Hand Movement Detection & Scene Prediction in EgoHands Video Dataset</b></p>
               <p style={{textAlign: 'justify'}}>
                 The goal of this project is to detect hands in the videos and predict the scene based on the hand actions using Deep Learning techniques.
                 <br/>
@@ -206,21 +244,19 @@ const IndexPage = () => (
               </p>
             </div>
             <div>
-              <b>
-                Community detection in networks with fuzzy boundaries
-              </b>
+              <p style={{textAlign: 'center'}}><b>Community detection in networks with fuzzy boundaries</b></p>
               <p style={{textAlign: 'justify'}}>In this paper, we presented simple yet effective ideas to sharpen the fuzzy boundaries between the communities in networks and proposed two algorithms for community detection known as SHCD and SRSTCD. We have used the concept of social harmony, space reduction and space transformation, and complement network for a given network in identify the fuzzy boundaries between the communities more accurately. Presented at the ADM-MLDM Conference 2019, New York.</p>
             </div>
             <div>
-              <b>Hard Drive Failure Prediction using Machine Learning Methods</b>
+              <p style={{textAlign: 'center'}}><b>Hard Drive Failure Prediction using Machine Learning Methods</b></p>
               <p style={{textAlign: 'justify'}}>The goal of our project is to identify hard disks which are at a risk of failing in a future time period. Our Machine learning model is trained on data obtained from several hard drive manufacturers, a publicly available dataset from Backblaze. Even with a highly skewed dataset, a base rate of 0.39%, we achieved recall of 0.89, precision of 0.85 and AUC ROC of 0.87 using AdaBoosted Decision Tree Classifier.</p>
             </div>
             <div>
-              <b>Flood Prediction in the U.S. using Machine Learning Methods</b>
+              <p style={{textAlign: 'center'}}><b>Flood Prediction in the U.S. using Machine Learning Methods</b></p>
               <p style={{textAlign: 'justify'}}>The goal of our project is to identify the flood-prone areas with probabilities of flooding in counties in a future date. We used Hadoop and Apache Spark MLlib package to train different ML models and used Grid Search algorithm for hyperparameter tuning. Out of all the different models, the Random Forrest Regressor performed the best with accuracy of 80%, precision of 0.85, recall of 0.80 and F1 score of 0.82.</p>
             </div>
             <div>
-              <b>Programming Languages Trend and Sentiment Analysis</b>
+              <p style={{textAlign: 'center'}}><b>Programming Languages Trend and Sentiment Analysis</b></p>
               <p style={{textAlign: 'justify'}}>Scraped StackOverflow and StackExchange data from 2010 through 2017 and performed data analysis on raw posts and comments data to gain insights about the upcoming programming languages and the overall satisfaction of the developer communities by the Sentiment analysis of the comments using NLTK, Pandas, NumPy, Matplotlib, Seaborn. We mitigated the challenge of having more than 100 GB of raw textual data by pre-processing our dataset on HDFS.</p>
             </div>
         </div>
