@@ -126,7 +126,7 @@ const Layout = ({ children }) => {
               <Link to="/#head-links"><FiArrowDownCircle /></Link>
             </div>
           </IconContext.Provider>
-        </div>
+      </div>
       <div
         style={{
           margin: `0 auto`,
