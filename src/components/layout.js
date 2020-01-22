@@ -103,8 +103,8 @@ const Layout = ({ children }) => {
       >
         <div>
           <Navbar/>
-          <div style={{position:'absolute',top:'20%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
-              <div  style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Hi, I'm Satyajeet.</div>
+          <div style={{position:'absolute',paddingBottom:'50%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
+              <div  style={{fontSize:'1.5em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Hi, I'm Satyajeet.</div>
               <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
               {/*<IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
                   <div>
