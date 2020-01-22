@@ -20,7 +20,6 @@ import A2Logo from "../images/acc.png";
 import DLogo from "../images/d.png";
 
 export default function Header() {
-  const [isNavVisible, setNavVisibility] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
@@ -39,10 +38,6 @@ export default function Header() {
     } else {
       setIsSmallScreen(false);
     }
-  };
-
-  const toggleNav = () => {
-    setNavVisibility(!isNavVisible);
   };
 
   return (<Layout>
@@ -72,7 +67,7 @@ export default function Header() {
           </div>
         </Desktop>*/}
         <CSSTransition
-          in={!isSmallScreen || isNavVisible}
+          in={!isSmallScreen}
           timeout={350}
           classNames="NavAnimation"
           unmountOnExit

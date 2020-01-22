@@ -7,29 +7,13 @@ import { useMediaQuery } from 'react-responsive'
 
 import { CSSTransition } from "react-transition-group";
 
-//import Navbar from "../components/navbar"
+import Navbar from "../components/navbar"
 
 import Image from "../components/image"
 import { FiArrowDownCircle } from 'react-icons/fi';
 import { FaExternalLinkAlt, FaReact, FaLinkedin,FaGithubSquare,FaEnvelope } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import { Link } from "gatsby"
-
-const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 1024 })
-  const isPotrait = useMediaQuery({ orientation: 'portrait' })
-  return isDesktop && !isPotrait ? children : null
-}
-const Tablet = ({ children }) => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 })
-  const isPotrait = useMediaQuery({ orientation: 'portrait' })
-  return isTablet || isPotrait ? children : null
-}
-const Mobile = ({ children }) => {
-  const isMobile = useMediaQuery({ maxWidth: 767 })
-  const isPotrait = useMediaQuery({ orientation: 'portrait' })
-  return isMobile || isPotrait? children : null
-}
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -118,16 +102,17 @@ const Layout = ({ children }) => {
         unmountOnExit
       >
         <div>
+          <Navbar/>
           <div style={{position:'absolute',top:'20%',left:'50%',transform:'translate(-50%,-50%)', textAlign:'center'}}>
-              <div  style={{fontSize:'3em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Hi, I'm Satyajeet.</div>
+              <div  style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Hi, I'm Satyajeet.</div>
               <div style={{fontSize:'1em',color:'white',fontWeight:'500',textShadow: '2px 2px 4px #000000'}}>Software Engineer | New York City</div>
-              <IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
-                <div>
-                  <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>&nbsp;&nbsp;
-                  <a href="https://github.com/satyajeetmaharana" target="_blank" rel="noopener noreferrer"><FaGithubSquare/></a>&nbsp;&nbsp;
-                  <a href="mailto:satyajeet@nyu.edu" target="_blank" rel="noopener noreferrer"><FaEnvelope/></a>
-                </div>
-              </IconContext.Provider>
+              {/*<IconContext.Provider value={{size:'2em',className:'contact-icons-top'}}>
+                  <div>
+                    <a href="https://www.linkedin.com/in/satyajeetmaharana/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>&nbsp;&nbsp;
+                    <a href="https://github.com/satyajeetmaharana" target="_blank" rel="noopener noreferrer"><FaGithubSquare/></a>&nbsp;&nbsp;
+                    <a href="mailto:satyajeet@nyu.edu" target="_blank" rel="noopener noreferrer"><FaEnvelope/></a>
+                  </div>
+                </IconContext.Provider>*/}
           </div>
         </div>
       </CSSTransition>
