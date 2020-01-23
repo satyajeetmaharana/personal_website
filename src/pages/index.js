@@ -19,6 +19,106 @@ import KLogo from "../images/kiit_logo.png";
 import A2Logo from "../images/acc.png";
 import DLogo from "../images/d.png";
 
+import JavaLogo from "../images/java.png";
+import SalesforceLogo from "../images/salesforce.png";
+import PythonLogo from "../images/python.png";
+import JSLogo from "../images/JS.png";  
+import CPlusPlusLogo from "../images/c_plusplus.png";  
+import ShellLogo from "../images/shell.png";  
+import HTMLLogo from "../images/html.png";
+import CSSLogo from "../images/css.png";
+import SQLLogo from "../images/mysql.svg";
+import HiveLogo from "../images/hive.png";
+import MongoDBLogo from "../images/mogodb.png";
+import SkLearnLogo from "../images/sklearn.png";
+import PyTorchLogo from "../images/pytorch.png";
+import SparkLogo from "../images/spark.png";
+import HadoopLogo from "../images/hadoop.png";
+import ReactLogo from "../images/react.png";
+
+import JenkinsLogo from "../images/jenkins.png";
+import GitLogo from "../images/git.png";
+import BambooLogo from "../images/bamboo.png";
+
+const skillsData = [
+  {
+    title:'Programming',
+    items: 
+        [
+          {img: JavaLogo,title: 'Java'},
+          {img: SalesforceLogo,title: 'Salesforce Apex'},
+          {img: PythonLogo,title: 'Python'},
+          {img: JSLogo,title: 'JavaScript'},
+          {img: CPlusPlusLogo,title: 'C++'},
+          {img: ShellLogo,title: 'Shell Scripting'},
+          {img: HTMLLogo,title: 'HTML'},
+          {img: CSSLogo,title: 'CSS'}
+        ]
+  },
+  {
+    title:'Databases',
+    items: 
+        [
+          {
+            img: SQLLogo,
+            title: 'SQL'
+          },
+          {
+            img: HiveLogo,
+            title: 'Hive'
+          },
+          {
+            img: MongoDBLogo,
+            title: 'MongoDB'
+          }
+        ]
+  },
+  {
+    title:'Frameworks & Technologies',
+    items: 
+        [
+          {
+            img: SkLearnLogo,
+            title: 'scikit-learn'
+          },
+          {
+            img: PyTorchLogo,
+            title: 'PyTorch'
+          },
+          {
+            img: SparkLogo,
+            title: 'Apache Spark'
+          },
+          {
+            img: HadoopLogo,
+            title: 'Hadoop'
+          },
+          {
+            img: ReactLogo,
+            title: 'React.js'
+          }
+        ]
+  },
+  {
+    title:'Tools',
+    items: 
+        [
+          {
+            img: JenkinsLogo,
+            title: 'Jenkins'
+          },
+          {
+            img: GitLogo,
+            title: 'Git'
+          },
+          {
+            img: BambooLogo,
+            title: 'Bamboo'
+          }
+        ]
+  }
+];
+
 export default function Header() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -39,6 +139,7 @@ export default function Header() {
       setIsSmallScreen(false);
     }
   };
+
 
   return (<Layout>
     <SEO title="Home" />
@@ -74,7 +175,7 @@ export default function Header() {
         >
           <div style={{position:'sticky',zIndex:'100',top:'30%',backgroundColor:'black',color:'white',padding:'1%',textAlign:'center',width:'14%',minWidth:'13%',marginLeft:'1%'}}>
             <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="div">
-                <div className="link-to-section"><a href="#AboutSec">About<br/></a></div>
+                <div className="link-to-section"><a href="#AboutSec">About me<br/></a></div>
                 <div className="link-to-section"><a href="#Skills">Skills<br/></a></div>
                 <div className="link-to-section"><a href="#Education">Education<br/></a></div>
                 <div className="link-to-section"><a href="#Experience">Experience<br/></a></div>
@@ -84,66 +185,52 @@ export default function Header() {
         </CSSTransition>
 
 
-        <div style={{display:'flex',paddingLeft:'20%',paddingRight:'20%',marginTop:'-100px'}} >
+        <div style={{display:'flex',paddingLeft:'20%',paddingRight:'20%',marginTop:'-100px'}} id="AboutSec">
           <div style={{flex:'1'}}>
-            <h1 style={{color:'#35db8b',textAlign:'center'}} id="AboutSec">About</h1>
+            <h1 style={{color:'#35db8b',textAlign:'center'}} >About</h1>
             <br/>
-            <p style={{textAlign:'center'}} >
-              Satyajeet is an engineer, focused on Software Development. 
+            <p style={{textAlign:'justify'}} >
+              Hi, I am Satyajeet Maharana. I am a second year graduate computer science student at Courant Institute of Mathematical Sciences at <a href="#NYU" style={{textDecoration:'none',color:'gray'}}>New York University</a>. 
+              <br/><br/>I have been extremely fortunate to have a diverse yet consistent set of <a href="#Experience" style={{textDecoration:'none',color:'gray'}}>experiences</a>.
+              Although I enjoy solving hard engineering problem, I am passionate about solving real customer problems with a business justification and where I can see the impact of my work. 
+              <br/><br/>I love building intuitive products that make business processes streamlined and as simple as possible for the end-users. 
+              I have worked in areas like front-end development, back-end development and have tapped on a rich toolset of skills like <a href="#Skills" style={{textDecoration:'none',color:'gray'}}>Big data processing, Machine Learning and DevOps engineering</a> to deliver robust & scalable products.
             </p>
           </div>
         </div>
         <div style={{height:'4rem'}}></div>
-        <div style={{display:'flex',paddingLeft:'20%',paddingRight:'20%'}} >
+        <div style={{display:'flex',paddingLeft:'20%',paddingRight:'20%'}} id="Skills">
           <div style={{flex:'1'}}>
-            <h1 style={{color:'#35db8b',textAlign:'center'}} id="Skills">Skills</h1>
+            <h1 style={{color:'#35db8b',textAlign:'center'}}>Skills</h1>
             <br/>
             <div style={{display:'flex',textAlign:'center',flexDirection:'column'}}>
-              <div style={{flex:'1'}}>
-                <div style={{display:'flex'}}>
-                  <div style={{flex:'1'}}>
-                  <b>Programming</b>
-                  </div>
-                  <div style={{flex:'1'}}>
-                    Java, Apex, Python, JavaScript, C++, Shell scripting, HTML, CSS
-                  </div>
-                </div>
-              </div>
-              <div style={{flex:'1'}}>
-                <div style={{display:'flex'}}>
-                  <div style={{flex:'1'}}>
-                  <b>Databases</b>
-                  </div>
-                  <div style={{flex:'1'}}>
-                  SQL, Hive, MongoDB
-                  </div>
-                </div>
-              </div>
-              <div style={{flex:'1'}}>
-                <div style={{display:'flex'}}>
-                  <div style={{flex:'1'}}>
-                  <b>Frameworks & Technology</b>
-                  </div>
-                  <div style={{flex:'1'}}>
-                  scikit-learn, PyTorch, Apache Spark, Hadoop, React.js
+              {skillsData.map(skill => (
+                <div style={{flex:'1'}}>
+                  <br/>
+                  <div style={{display:'flex',flexDirection:'column'}}>
+                    <div style={{flex:'1',fontSize:'130%'}}>
+                      <b>{skill.title}</b>
+                    </div>
+                    <br/>
+                    <div style={{flex:'1',boxShadow: '5px 5px 10px #888888',padding:'10px',verticalAlign:'middle'}}>
+                      <div style={{display:'flex',flexWrap:'wrap'}}>
+                        {skill.items.map(tile => (
+                          <div style={{flex:'1',display:'flex',flexDirection:'column',padding:'10px'}}>
+                            <div style={{flex: '1 0 auto'}}>
+                              <img src={tile.img} className='tech-logos' alt={tile.title}/>
+                              <div style={{flex: '1 0 auto'}}>{tile.title}</div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div style={{flex:'1'}}>
-                <div style={{display:'flex'}}>
-                  <div style={{flex:'1'}}>
-                  <b>Tools</b>
-                  </div>
-                  <div style={{flex:'1'}}>
-                    Jenkins, Git, Bamboo
-                  </div>
-                </div>
-              </div>
+                ))}
             </div>
           </div>
         </div>
         <div style={{height:'4rem'}}></div>
-        
         <div style={{paddingLeft:'20%',paddingRight:'20%'}} id="Education">
           <h1 style={{color:'#35db8b',textAlign:'center'}} >Education</h1>
           <div>
@@ -155,7 +242,7 @@ export default function Header() {
             * 
             */}
             <div>
-              <div style={{textAlign:'center'}} >
+              <div style={{textAlign:'center'}} id="NYU">
                 <p style={{margin: 'auto',textAlign:'center',fontSize:'130%'}}>
                     <div><img src={NLogo} className='logos'alt="New York University"/></div>
                     <div><b>New York University</b></div>

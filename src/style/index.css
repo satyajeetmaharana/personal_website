@@ -35,3 +35,10 @@ div.link-to-section > a:hover{
     min-width: 10%;
     height: auto;
 }
+
+.tech-logos{
+    width: auto;
+    max-height: 2.5em;
+    max-width:fit-content;
+    height:auto;
+}
