@@ -175,7 +175,7 @@ export default function Header() {
         >
           <div style={{position:'sticky',zIndex:'100',top:'30%',backgroundColor:'black',color:'white',padding:'1%',textAlign:'center',width:'14%',minWidth:'13%',marginLeft:'1%'}}>
             <Scrollspy items={ ['AboutSec', 'Skills', 'Education','Experience','Projects'] } currentClassName="is-current" componentTag="div">
-                <div className="link-to-section"><a href="#AboutSec">About me<br/></a></div>
+                <div className="link-to-section"><a href="#AboutSec">About<br/></a></div>
                 <div className="link-to-section"><a href="#Skills">Skills<br/></a></div>
                 <div className="link-to-section"><a href="#Education">Education<br/></a></div>
                 <div className="link-to-section"><a href="#Experience">Experience<br/></a></div>
@@ -187,7 +187,7 @@ export default function Header() {
 
         <div style={{display:'flex',paddingLeft:'20%',paddingRight:'20%',marginTop:'-100px'}} id="AboutSec">
           <div style={{flex:'1'}}>
-            <h1 style={{color:'#35db8b',textAlign:'center'}} >About</h1>
+            <h1 style={{color:'#35db8b',textAlign:'center'}} >About Me</h1>
             <br/>
             <p style={{textAlign:'justify'}} >
               Hi, I am Satyajeet Maharana. I am a second year graduate computer science student at Courant Institute of Mathematical Sciences at <a href="#NYU" style={{textDecoration:'none',color:'gray'}}>New York University</a>. 
