@@ -199,7 +199,7 @@ export default function Header() {
           </div>
         </div>
         <div style={{height:'4rem'}}></div>
-        <div style={{display:'flex',paddingLeft:'20%',paddingRight:'20%'}} id="Skills">
+        <div style={{display:'flex',paddingLeft:'20%',paddingRight:'20%',textAlign:'center'}} id="Skills">
           <div style={{flex:'1'}}>
             <h1 style={{color:'#35db8b',textAlign:'center'}}>Skills</h1>
             <br/>
