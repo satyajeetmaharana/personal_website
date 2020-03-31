@@ -309,7 +309,8 @@ export default function Header() {
                 </div> 
                 <p style={{textAlign: 'justify'}}>
                   <ul>
-                    <li>Revamped the sales and services platform by developing scalable and responsive business applications using Java which led to streamlined business process and improved user experience</li>
+                    <li>Restructured the database schema in the CRM platform enabling a wider range of queries and reducing existing update times by 40%.</li>
+                    <li>Redesigned the front-end of the a4 Sales platform to make it more responsive, intuitive and aesthetic. Migrated the stack from Visualforce to Lightning Web Components.</li>
                   </ul>
                 </p>
               </div>
