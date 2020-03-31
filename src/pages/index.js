@@ -394,6 +394,7 @@ export default function Header() {
             <div>
               <p style={{textAlign: 'center'}}><b>Community detection in networks with fuzzy boundaries</b></p>
               <p style={{textAlign: 'justify'}}>In this paper, we presented simple yet effective ideas to sharpen the fuzzy boundaries between the communities in networks and proposed two algorithms for community detection known as SHCD and SRSTCD. We have used the concept of social harmony, space reduction and space transformation, and complement network for a given network in identify the fuzzy boundaries between the communities more accurately. Presented at the ADM-MLDM Conference 2019, New York.</p>
+              <p style={{textAlign: 'justify'}}><a href="http://ibai-publishing.org/html/proceedings_2019/pdf/proceedings_book_mldm_2019_volume_1.pdf" target="_blank" rel="noopener noreferrer">See the publication</a></p>
             </div>
             <div>
               <p style={{textAlign: 'center'}}><b>Hard Drive Failure Prediction using Machine Learning Methods</b></p>
