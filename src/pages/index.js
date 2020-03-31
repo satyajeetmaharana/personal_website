@@ -278,7 +278,7 @@ export default function Header() {
               <div>
                 <div style={{textAlign:'center',color:'gray'}}>
                   <b>Bachelor of Technology in Electronics & Telecommunication</b>
-                  <div>Sep 2018-May 2020</div>
+                  <div>Aug 2011-May 2015</div>
                 </div>
               </div>
             </div>
